@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {"const":"0.1-draft"},
+    "generator_version": {"const":"0.1.0"},
+    "seed": {"type":"integer"},
+    "instance_id": {"type":"string","pattern":"^A[15]-[0-9a-f]{20}$"},
+    "specification_hash": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "family_id": {"enum":["A1","A5"]},
+    "structure_id": {"type":"string","minLength":1},
+    "template_version": {"type":"string","minLength":1},
+    "spatial_domain": {"type":"string","minLength":1},
+    "boundary_conditions": {"type":"string","minLength":1},
+    "wave_id": {"type":"string","minLength":1},
+    "branch_id": {"type":"string","minLength":1},
+    "function_space": {"type":"string","minLength":1},
+    "operator_domain": {"type":"string","minLength":1},
+    "weights": {"type":"string","minLength":1},
+    "stability_question": {"type":"string","minLength":1},
+    "neutral_mode_policy": {"type":"string","minLength":1},
+    "variables": {},
+    "equations": {},
+    "target_wave": {},
+    "linearised_operator": {},
+    "far_field_data": {},
+    "parameters": {"type":"object"},
+    "required_solver_capabilities": {"type":"array","items":{"type":"string","minLength":1}},
+    "references": {"type":"array","items":{"type":"string","minLength":1}},
+    "task_type": {"enum":["unstable_count","binary_stability"]},
+    "stability_convention": {"enum":["open_RHP_count","unweighted_shock_edge"]},
+    "expected_proof_mechanisms": {"type":"array","items":{"type":"string","minLength":1}},
+    "diversity_level": {"enum":["L1","L2"]},
+    "validity_checks": {
+      "type": "object",
+      "properties": {
+        "profile": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "endstates": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "phase": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "diffusion": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "linearisation": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "translation": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "global_nonlinear_existence": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "proof_difficulty": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]},
+        "solver_dispatch": {"enum":["PASS","FAIL","UNVERIFIED","NOT_APPLICABLE"]}
+      },
+      "required": [
+        "profile",
+        "endstates",
+        "phase",
+        "diffusion",
+        "linearisation",
+        "translation",
+        "global_nonlinear_existence",
+        "proof_difficulty",
+        "solver_dispatch"
+      ],
+      "additionalProperties": false
+    },
+    "novelty_assessment": {
+      "type": "object",
+      "properties": {
+        "status": {"enum":["UNCERTAIN","NOT_NOVEL","LIKELY_NOVEL"]},
+        "screen": {"type":"string","minLength":1},
+        "grouping": {"type":"string","minLength":1},
+        "training_admission": {"const":"HOLD"}
+      },
+      "required": ["status","screen","grouping","training_admission"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "generator_version",
+    "seed",
+    "instance_id",
+    "specification_hash",
+    "family_id",
+    "structure_id",
+    "template_version",
+    "spatial_domain",
+    "boundary_conditions",
+    "wave_id",
+    "branch_id",
+    "function_space",
+    "operator_domain",
+    "weights",
+    "stability_question",
+    "neutral_mode_policy",
+    "variables",
+    "equations",
+    "target_wave",
+    "linearised_operator",
+    "far_field_data",
+    "parameters",
+    "required_solver_capabilities",
+    "references",
+    "task_type",
+    "stability_convention",
+    "expected_proof_mechanisms",
+    "diversity_level",
+    "validity_checks",
+    "novelty_assessment"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"properties":{"family_id":{"const":"A1"}}},
+      "then": {
+        "properties": {
+          "variables": {"type":"array","items":{"type":"string","minLength":1},"minItems":4,"maxItems":4},
+          "equations": {
+            "type": "object",
+            "properties": {
+              "form": {"const":"D*X_xx-A*X_x+F+dx(G)"},
+              "D": {"$ref":"#/$defs/vector4"},
+              "A": {"$ref":"#/$defs/vector4"},
+              "F": {"$ref":"#/$defs/vector4"},
+              "G": {"$ref":"#/$defs/vector4"}
+            },
+            "required": ["form","D","A","F","G"],
+            "additionalProperties": false
+          },
+          "target_wave": {
+            "type": "object",
+            "properties": {
+              "basis": {"type":"string","minLength":1},
+              "speed": {"type":"integer"},
+              "profile": {"$ref":"#/$defs/vector4"},
+              "dz": {"$ref":"#/$defs/vector4"},
+              "dzz": {"$ref":"#/$defs/vector4"},
+              "endstates": {"type":"array","items":{"$ref":"#/$defs/vector4"},"minItems":2,"maxItems":2},
+              "phase": {"type":"string","minLength":1},
+              "existence": {"const":"EXACT_SUBSTITUTION"}
+            },
+            "required": ["basis","speed","profile","dz","dzz","endstates","phase","existence"],
+            "additionalProperties": false
+          },
+          "linearised_operator": {
+            "type": "object",
+            "properties": {
+              "form": {"const":"D*p''+B*p'+C*p"},
+              "D": {"$ref":"#/$defs/vector4"},
+              "B": {"$ref":"#/$defs/matrix4"},
+              "C": {"$ref":"#/$defs/matrix4"}
+            },
+            "required": ["form","D","B","C"],
+            "additionalProperties": false
+          },
+          "far_field_data": {
+            "type": "object",
+            "properties": {
+              "symbol": {"type":"string","minLength":1},
+              "coefficients": {
+                "type": "object",
+                "properties": {"left":{"$ref":"#/$defs/endpoint4"},"right":{"$ref":"#/$defs/endpoint4"}},
+                "required": ["left","right"],
+                "additionalProperties": false
+              },
+              "essential": {"type":"string","minLength":1},
+              "rhp_splitting": {"type":"array","items":{"type":"integer","minimum":0},"minItems":2,"maxItems":2}
+            },
+            "required": ["symbol","coefficients","essential","rhp_splitting"],
+            "additionalProperties": false
+          },
+          "parameters": {
+            "type": "object",
+            "properties": {"q":{"$ref":"#/$defs/rational"},"a":{"$ref":"#/$defs/rational"},"beta":{"$ref":"#/$defs/rational"}},
+            "required": ["q","a","beta"],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties":{"family_id":{"const":"A5"}}},
+      "then": {
+        "properties": {
+          "variables": {"type":"array","items":{"type":"string","minLength":1},"minItems":2,"maxItems":2},
+          "equations": {
+            "type": "object",
+            "properties": {
+              "form": {"const":"D*X_xx-A*X_x+F+dx(G)"},
+              "D": {"$ref":"#/$defs/vector2"},
+              "A": {"$ref":"#/$defs/vector2"},
+              "F": {"$ref":"#/$defs/vector2"},
+              "G": {"$ref":"#/$defs/vector2"}
+            },
+            "required": ["form","D","A","F","G"],
+            "additionalProperties": false
+          },
+          "target_wave": {
+            "type": "object",
+            "properties": {
+              "basis": {"type":"string","minLength":1},
+              "speed": {"type":"integer"},
+              "profile": {"$ref":"#/$defs/vector2"},
+              "dz": {"$ref":"#/$defs/vector2"},
+              "dzz": {"$ref":"#/$defs/vector2"},
+              "endstates": {"$ref":"#/$defs/matrix2"},
+              "phase": {"type":"string","minLength":1},
+              "existence": {"const":"EXACT_SUBSTITUTION"}
+            },
+            "required": ["basis","speed","profile","dz","dzz","endstates","phase","existence"],
+            "additionalProperties": false
+          },
+          "linearised_operator": {
+            "type": "object",
+            "properties": {
+              "form": {"const":"D*p''+B*p'+C*p"},
+              "D": {"$ref":"#/$defs/vector2"},
+              "B": {"$ref":"#/$defs/matrix2"},
+              "C": {"$ref":"#/$defs/matrix2"}
+            },
+            "required": ["form","D","B","C"],
+            "additionalProperties": false
+          },
+          "far_field_data": {
+            "type": "object",
+            "properties": {
+              "symbol": {"type":"string","minLength":1},
+              "coefficients": {
+                "type": "object",
+                "properties": {"left":{"$ref":"#/$defs/endpoint2"},"right":{"$ref":"#/$defs/endpoint2"}},
+                "required": ["left","right"],
+                "additionalProperties": false
+              },
+              "essential": {"type":"string","minLength":1},
+              "rhp_splitting": {"type":"array","items":{"type":"integer","minimum":0},"minItems":2,"maxItems":2}
+            },
+            "required": ["symbol","coefficients","essential","rhp_splitting"],
+            "additionalProperties": false
+          },
+          "parameters": {
+            "type": "object",
+            "properties": {"mu":{"$ref":"#/$defs/rational"},"rho":{"$ref":"#/$defs/rational"}},
+            "required": ["mu","rho"],
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "rational": {"type":"string","pattern":"^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"},
+    "polynomial": {
+      "type": "object",
+      "propertyNames": {"pattern":"^(1|[a-z](\\*[a-z])*)$"},
+      "additionalProperties": {"$ref":"#/$defs/rational"}
+    },
+    "vector4": {"type":"array","items":{"$ref":"#/$defs/polynomial"},"minItems":4,"maxItems":4},
+    "matrix4": {"type":"array","items":{"$ref":"#/$defs/vector4"},"minItems":4,"maxItems":4},
+    "endpoint4": {
+      "type": "object",
+      "properties": {"B":{"$ref":"#/$defs/matrix4"},"C":{"$ref":"#/$defs/matrix4"}},
+      "required": ["B","C"],
+      "additionalProperties": false
+    },
+    "vector2": {"type":"array","items":{"$ref":"#/$defs/polynomial"},"minItems":2,"maxItems":2},
+    "matrix2": {"type":"array","items":{"$ref":"#/$defs/vector2"},"minItems":2,"maxItems":2},
+    "endpoint2": {
+      "type": "object",
+      "properties": {"B":{"$ref":"#/$defs/matrix2"},"C":{"$ref":"#/$defs/matrix2"}},
+      "required": ["B","C"],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "A1_q1_a2",
+    "problem": "A1",
+    "family_version": "design-v1",
+    "solver_version": "1.0.0",
+    "parameters": {
+      "q": 1,
+      "a": 2
+    },
+    "wave": "(sech z,(sech z)',sech^2 z,sech^3 z), maximum at 0",
+    "speed": 1,
+    "function_space": "unweighted L2(R)^4, domain H2(R)^4",
+    "convention": "An open-RHP eigenvalue implies instability. Record all imaginary-axis modes separately.",
+    "label": "UNSTABLE",
+    "evidence_grade": "CONVERGED_NUMERICAL",
+    "numerical_open_rhp_count": 2,
+    "roots": [
+      {
+        "lambda_value": [
+          4.469956339608715,
+          1.1080454417403818
+        ],
+        "observed_error_scale": 0.0008001102968769147,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          4.469956339608716,
+          -1.1080454417403822
+        ],
+        "observed_error_scale": 0.0008001102968903451,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -2.1150422083069437e-08,
+          1.3896888405099767e-22
+        ],
+        "observed_error_scale": 0.00046847208012504044,
+        "unit_local_count": true
+      }
+    ],
+    "positive_witness_indices": [
+      0,
+      1
+    ],
+    "complete_numerical_count": true,
+    "search": {
+      "real_max": 251.0,
+      "imag_abs_max": 617.0,
+      "left": -0.04,
+      "left_bulge_radius": 0.08
+    },
+    "essential": "Re <= -1, identical endstates",
+    "failure_reason": null,
+    "settings": {
+      "cases": [
+        [
+          "A1",
+          1,
+          2,
+          [
+            [
+              4.47,
+              1.11
+            ],
+            [
+              4.47,
+              -1.11
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      ],
+      "evans_grids": [
+        [
+          12,
+          0.16
+        ],
+        [
+          16,
+          0.16
+        ],
+        [
+          16,
+          0.08
+        ],
+        [
+          16,
+          0.04
+        ]
+      ],
+      "fd_grids": [
+        [
+          16,
+          0.1
+        ],
+        [
+          22,
+          0.1
+        ],
+        [
+          22,
+          0.05
+        ],
+        [
+          22,
+          0.025
+        ]
+      ],
+      "gates": {
+        "contour_relative_change": 0.25,
+        "eigenpair_residual": 1e-07,
+        "fd_condition_max": 10000,
+        "graph_residual": 1e-09,
+        "neutral_refinement_ratio": 0.15,
+        "profile_and_jacobian": 1e-10,
+        "shooting_relative_change": 0.1,
+        "tail_norm": 0.02
+      },
+      "local_radius": 0.08,
+      "origin_radius": 0.08,
+      "outer_initial_panels": 72,
+      "phase_limit": 0.56,
+      "sign_margin_factor": 10
+    },
+    "elapsed_seconds": 4.125599200000124,
+    "artifacts": [
+      "A1_q1_a2/diagnostics.json",
+      "A1_q1_a2/contours.json.gz"
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "artifact_refs": [
+    "settings.json",
+    "solver.log",
+    "raw/A1_q1_a2/case.json",
+    "raw/environment.json",
+    "raw/A1_q1_a2/diagnostics.json",
+    "raw/A1_q1_a2/contours.json.gz"
+  ],
+  "complete_numerical_count": true,
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "failure_reason": null,
+  "instance_id": "A1-3f4984da835a08cc578f",
+  "label": "UNSTABLE",
+  "post_solver_review": {
+    "disposition": "HOLD",
+    "finding": "2 positive witnesses have disks disjoint from the real axis. Nearby samples share a proof family. Collision and completeness proofs require review."
+  },
+  "runtime_seconds": 4.789310300000125,
+  "schema_version": "0.1-draft",
+  "settings_hash": "a69df5ac1bbb538b7ca7711ef56860da30dee8b69df9d0a3d0e8dc37af25b5bb",
+  "solver_status": "COMPLETED",
+  "solver_version": "1.0.0",
+  "specification_hash": "3f4984da835a08cc578f09ea372087c778bfe7e2f405dbeb6ffa742a1ec6ffc2",
+  "spectral_search": {
+    "imag_abs_max": 617.0,
+    "left": -0.04,
+    "left_bulge_radius": 0.08,
+    "real_max": 251.0
+  },
+  "unstable_count": 2,
+  "verification": {
+    "native_elapsed_seconds": 4.125599200000124,
+    "positive_witness_indices": [
+      0,
+      1
+    ],
+    "roots": [
+      {
+        "lambda_value": [
+          4.469956339608715,
+          1.1080454417403818
+        ],
+        "observed_error_scale": 0.0008001102968769147,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          4.469956339608716,
+          -1.1080454417403822
+        ],
+        "observed_error_scale": 0.0008001102968903451,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -2.1150422083069437e-08,
+          1.3896888405099767e-22
+        ],
+        "observed_error_scale": 0.00046847208012504044,
+        "unit_local_count": true
+      }
+    ]
+  }
+}

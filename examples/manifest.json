@@ -1,0 +1,10 @@
+{
+  "fixture": "fixtures/a5-mu3.json",
+  "instances": [
+    "A1-dd0b7de1e02e0a26b7b4",
+    "A1-3f4984da835a08cc578f",
+    "A1-49dce71cae67b4b4a998",
+    "A1-08cb57a942e347825a1a"
+  ],
+  "seed": 20261124
+}

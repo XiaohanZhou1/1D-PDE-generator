@@ -1,0 +1,21 @@
+{
+  "artifact_refs": [],
+  "complete_numerical_count": false,
+  "evidence_grade": null,
+  "failure_reason": "The built-in A1 model omits beta*u^2*(v-u^2) in the y reaction.",
+  "instance_id": "A1-08cb57a942e347825a1a",
+  "label": null,
+  "post_solver_review": {
+    "disposition": "HOLD",
+    "finding": "Awaiting compatible solver."
+  },
+  "runtime_seconds": 0.0005296999997881358,
+  "schema_version": "0.1-draft",
+  "settings_hash": null,
+  "solver_status": "NOT_RUN",
+  "solver_version": null,
+  "specification_hash": "08cb57a942e347825a1a25873af7719067d665baa55068e1ed030f50f74e19b3",
+  "spectral_search": null,
+  "unstable_count": null,
+  "verification": null
+}

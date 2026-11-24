@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {"const":"0.1-draft"},
+    "instance_id": {"type":"string","pattern":"^A[15]-[0-9a-f]{20}$"},
+    "specification_hash": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "solver_status": {"enum":["NOT_RUN","COMPLETED","FAILED"]},
+    "solver_version": {"anyOf":[{"type":"string","minLength":1},{"type":"null"}]},
+    "settings_hash": {"anyOf":[{"type":"string","pattern":"^[a-f0-9]{64}$"},{"type":"null"}]},
+    "label": {"anyOf":[{"enum":["UNSTABLE","STABLE_MOD_TRANSLATION","MARGINAL","UNCERTAIN"]},{"type":"null"}]},
+    "evidence_grade": {"anyOf":[{"enum":["EXPLORATORY","CONVERGED_NUMERICAL","RIGOROUSLY_CERTIFIED"]},{"type":"null"}]},
+    "unstable_count": {"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},
+    "complete_numerical_count": {"type":"boolean"},
+    "spectral_search": {"anyOf":[{"type":"object"},{"type":"null"}]},
+    "verification": {"anyOf":[{"type":"object"},{"type":"null"}]},
+    "artifact_refs": {"type":"array","items":{"type":"string","minLength":1}},
+    "runtime_seconds": {"type":"number","minimum":0},
+    "failure_reason": {"anyOf":[{"type":"string","minLength":1},{"type":"null"}]},
+    "post_solver_review": {
+      "type": "object",
+      "properties": {"disposition":{"const":"HOLD"},"finding":{"type":"string","minLength":1}},
+      "required": ["disposition","finding"],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "instance_id",
+    "specification_hash",
+    "solver_status",
+    "solver_version",
+    "settings_hash",
+    "label",
+    "evidence_grade",
+    "unstable_count",
+    "complete_numerical_count",
+    "spectral_search",
+    "verification",
+    "artifact_refs",
+    "runtime_seconds",
+    "failure_reason",
+    "post_solver_review"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"properties":{"solver_status":{"const":"NOT_RUN"}}},
+      "then": {
+        "properties": {
+          "label": {"type":"null"},
+          "evidence_grade": {"type":"null"},
+          "unstable_count": {"type":"null"},
+          "complete_numerical_count": {"const":false}
+        }
+      }
+    },
+    {
+      "if": {"properties":{"complete_numerical_count":{"const":false}}},
+      "then": {"properties":{"unstable_count":{"type":"null"}}}
+    },
+    {
+      "if": {"properties":{"solver_status":{"const":"COMPLETED"}}},
+      "then": {
+        "properties": {
+          "label": {"type":"string","minLength":1},
+          "solver_version": {"type":"string","minLength":1},
+          "evidence_grade": {"type":"string","minLength":1},
+          "settings_hash": {"type":"string","pattern":"^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    {
+      "if": {"properties":{"solver_status":{"const":"FAILED"}}},
+      "then": {
+        "properties": {
+          "label": {"type":"null"},
+          "evidence_grade": {"type":"null"},
+          "complete_numerical_count": {"const":false},
+          "failure_reason": {"type":"string"}
+        }
+      }
+    },
+    {
+      "if": {"properties":{"complete_numerical_count":{"const":true}}},
+      "then": {"properties":{"unstable_count":{"type":"integer","minimum":0},"solver_status":{"const":"COMPLETED"}}}
+    },
+    {
+      "if": {"properties":{"label":{"const":"STABLE_MOD_TRANSLATION"}}},
+      "then": {"properties":{"unstable_count":{"const":0},"complete_numerical_count":{"const":true}}}
+    }
+  ]
+}

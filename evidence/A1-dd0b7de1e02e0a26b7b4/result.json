@@ -1,0 +1,88 @@
+{
+  "artifact_refs": [
+    "settings.json",
+    "solver.log",
+    "raw/A1_q0_a4/case.json",
+    "raw/environment.json",
+    "raw/A1_q0_a4/diagnostics.json",
+    "raw/A1_q0_a4/contours.json.gz"
+  ],
+  "complete_numerical_count": true,
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "failure_reason": null,
+  "instance_id": "A1-dd0b7de1e02e0a26b7b4",
+  "label": "UNSTABLE",
+  "post_solver_review": {
+    "disposition": "HOLD",
+    "finding": "Analytically reducible calibration point. Exclude from proof training."
+  },
+  "runtime_seconds": 6.2262055999999575,
+  "schema_version": "0.1-draft",
+  "settings_hash": "e69dcda20147b76e76203d581dfef655265737110bf099e1579f7f72db8cf074",
+  "solver_status": "COMPLETED",
+  "solver_version": "1.0.0",
+  "specification_hash": "dd0b7de1e02e0a26b7b4d1cdcea9f08849e942d407ab2abcbd86d5e43a2fddba",
+  "spectral_search": {
+    "imag_abs_max": 537.0,
+    "left": -0.04,
+    "left_bulge_radius": 0.08,
+    "real_max": 201.0
+  },
+  "unstable_count": 1,
+  "verification": {
+    "native_elapsed_seconds": 5.268562499999916,
+    "positive_witness_indices": [
+      0
+    ],
+    "roots": [
+      {
+        "lambda_value": [
+          2.9999999090270206,
+          6.539468311505428e-21
+        ],
+        "observed_error_scale": 0.0003573949276161059,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -1.8050336952865761e-07,
+          -7.254770594014147e-21
+        ],
+        "observed_error_scale": 0.0006929453941309097,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -9.09729801495376e-08,
+          1.9999999999999996
+        ],
+        "observed_error_scale": 0.0003573949276802577,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -9.097298014956256e-08,
+          -1.9999999999999996
+        ],
+        "observed_error_scale": 0.0003573949276542091,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -3.000000180503369,
+          1.9999999999999998
+        ],
+        "observed_error_scale": 0.0006929453940931474,
+        "unit_local_count": true
+      },
+      {
+        "lambda_value": [
+          -3.000000180503369,
+          -1.9999999999999998
+        ],
+        "observed_error_scale": 0.0006929453941175723,
+        "unit_local_count": true
+      }
+    ]
+  }
+}

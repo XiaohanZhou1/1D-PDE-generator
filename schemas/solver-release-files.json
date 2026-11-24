@@ -1,0 +1,12 @@
+{
+  "benchmark.json": "c90340df4bbc01f7706f95b4e7862f030a5b0fb30c46d14ad048a6f09c3ab93e",
+  "run.py": "febd8e5da7e81fb34f7b6b29523ff951383e3909b083680349fddf6d18d98198",
+  "spectral/__init__.py": "6fd65dbd00fcc227e91195aee960d38e33fee5ce0f20e4641dfce48eee5757ef",
+  "spectral/audit.py": "3530df5455e617e25eb1aa038947abf45cde60b419ebfc34cf1a30e5adbf083a",
+  "spectral/checks.py": "148913dfccebeea285a8cf3a26d7a81b73932d3b792dabf2a00c8aee1de6a7da",
+  "spectral/contours.py": "1883a10f4a904bbc307eb205b75fa754bf95f5ddcf1aceccc29e40cbcbb43fd7",
+  "spectral/evans.py": "8455d82b812563908dd3530c6be05dabe9e8a4806581b3e948c227aa2fb38908",
+  "spectral/jordan.py": "698a0f6760b0db374e5e88332ddec1b19a72abdc8f2932aec2232467cd71d9c1",
+  "spectral/models.py": "181d8269d29a4360e9d5ddcbe52e90c6bafa9ad1368c597599b2e3920ebcd7a9",
+  "spectral/shooting.py": "14e8335a6de69b241ef37fc2b9ffb96e66480c9843324522fea4c9c47fdb43ff"
+}
