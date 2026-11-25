@@ -27,8 +27,8 @@ The mathematical fingerprint is SHA-256 of compact, key-sorted, ASCII-escaped JS
 | Original A1, sampled neighbourhood of (1,2) | Seeded dyadic parameters with exact binary64 representation | Scout the upper root by coarse physical-space shift-invert at the new parameter. Use its conjugate and exact translation as additional centres. Full native gates still apply. |
 | Other admissible A1 parameters | Exact target and operator can be exported | Hold pending a reviewed scouting policy. Exact parameters that round in binary64 are also held. |
 | A1 with beta nonzero | Exact candidate with a changed second reaction row | NOT_RUN with reason. Native physics, physical-space check and high-frequency envelope require extension. |
-| A5, mu=3 and rho=0 | Fixed G0 fixture | Native conservative and integrated formulations with origin continuation |
-| Parameter-uniform theorem, Jordan certification, G2 sampling, A2–A4, weighted or mixed-order systems | Roadmap or specialist review | Outside this bridge |
+| A5, 1 ≤ mu ≤ 6 and rho=0 | Exact parameter generation on the original A5 branch. The fixed G0 fixture is reproducible. | Native conservative and integrated formulations with origin continuation at binary64-exact parameters |
+| Parameter-uniform theorem, Jordan certification, modified A5 fluxes, A2–A4, weighted or mixed-order systems | Roadmap or specialist review | Outside this bridge |
 
 The adapter pins the native source files and default settings by SHA-256. A change of solver release requires a compatibility review. Before calling the native CLI it reconstructs the input and compares off-wave reactions or fluxes and on-wave coefficients at seven points to the native model. These samples are regression checks. The independent derivation and polynomial identities supply the mathematical justification. The native CLI receives one case through a dedicated config file using `--config` and a fresh `--output` folder. It returns native case, settings, environment, diagnostics and contour samples. The bridge compares the returned family, parameters and settings and links their record to the input hash. Scouting hints are numerical search data.
 

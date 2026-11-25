@@ -1,0 +1,293 @@
+{
+  "coefficient_audit": {
+    "full_operator_max_error": 7.105427357601002e-15,
+    "integrated_operator_max_error": 7.105427357601002e-15,
+    "profile_rhs_max_error": 2.7205885114178763e-15
+  },
+  "computed_profile": {
+    "L": 24.0,
+    "exact_profile_max_error": 0.0,
+    "source": "continued"
+  },
+  "continued_origin": {
+    "open_rhp_count": 0,
+    "outcome": "NO_ADDITIONAL_ZEROS_NUMERICAL",
+    "windings": [
+      {
+        "L": 24.0,
+        "origin": {
+          "count": 1,
+          "evaluations": 192,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.03278675160186143,
+          "resolved": true
+        },
+        "outer": {
+          "count": 1,
+          "evaluations": 400,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.42645022574726776,
+          "resolved": true
+        },
+        "radius": 0.04,
+        "step": 0.08
+      },
+      {
+        "L": 24.0,
+        "origin": {
+          "count": 1,
+          "evaluations": 192,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.03292532837556225,
+          "resolved": true
+        },
+        "outer": {
+          "count": 1,
+          "evaluations": 396,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.4295611759247167,
+          "resolved": true
+        },
+        "radius": 0.08,
+        "step": 0.08
+      },
+      {
+        "L": 24.0,
+        "origin": {
+          "count": 1,
+          "evaluations": 192,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.03278682807831499,
+          "resolved": true
+        },
+        "outer": {
+          "count": 1,
+          "evaluations": 400,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.4264511822002533,
+          "resolved": true
+        },
+        "radius": 0.04,
+        "step": 0.04
+      },
+      {
+        "L": 24.0,
+        "origin": {
+          "count": 1,
+          "evaluations": 192,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.03292538054963523,
+          "resolved": true
+        },
+        "outer": {
+          "count": 1,
+          "evaluations": 396,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.429561954412528,
+          "resolved": true
+        },
+        "radius": 0.08,
+        "step": 0.04
+      },
+      {
+        "L": 18.0,
+        "origin": {
+          "count": 1,
+          "evaluations": 192,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.0327868280769508,
+          "resolved": true
+        },
+        "outer": {
+          "count": 1,
+          "evaluations": 400,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.4264511821998084,
+          "resolved": true
+        },
+        "radius": 0.04,
+        "step": 0.04
+      },
+      {
+        "L": 18.0,
+        "origin": {
+          "count": 1,
+          "evaluations": 192,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.032925380550793706,
+          "resolved": true
+        },
+        "outer": {
+          "count": 1,
+          "evaluations": 396,
+          "gamma_count": 0,
+          "gamma_max_step": 0.0,
+          "max_phase_step": 0.4295619544139727,
+          "resolved": true
+        },
+        "radius": 0.08,
+        "step": 0.04
+      }
+    ]
+  },
+  "instance_id": "A5-4537fbed294780878362",
+  "native": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "closed_half_plane": {
+      "counts": [
+        null,
+        null,
+        null
+      ],
+      "evaluations": 2772,
+      "h_fine": 0.02499999999999999,
+      "label": "UNCERTAIN",
+      "qualifier": "algebraic decay",
+      "reason": "the counts differ between the meshes or the domains, or are not resolved",
+      "refinement_level": 2,
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 24.771893575276813,
+          "bK": 12.33544921875,
+          "c0": 0.0,
+          "c2": 0.0,
+          "d": 1.0,
+          "d1": 7.105427357601002e-15,
+          "lam0": 0.0,
+          "reason": null,
+          "s1": 9.960797884854486
+        },
+        "source": "given in the problem file",
+        "x_max": 161.0,
+        "x_min": 0.0,
+        "y_max": 640.0
+      },
+      "resolved": [
+        false,
+        false,
+        false
+      ],
+      "roots": [],
+      "splitting_dimension": 2,
+      "threshold": 0.0
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        1.0,
+        4.440892098500626e-16
+      ],
+      "jump_residual": 8.512325619754944e-16,
+      "method": "determinant on the closed half-plane",
+      "operator": "integrated",
+      "speed": 0.0,
+      "transport": {
+        "left": [
+          -2.000000000000001,
+          1.0000000000000009
+        ],
+        "right": [
+          -0.9999999999999982,
+          1.9999999999999982
+        ]
+      }
+    },
+    "decided_in_pass": null,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "evaluations": 2772,
+    "file": "A5-4537fbed294780878362",
+    "label": "UNCERTAIN",
+    "name": "A5-4537fbed294780878362",
+    "parameters": {},
+    "reason": "conservation form, integrated operator on the closed half-plane Re(lambda) >= 0: the counts differ between the meshes or the domains, or are not resolved",
+    "roots": [],
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "closed_half_plane": 0.7480453000025591,
+      "essential_spectrum": 0.084845099998347,
+      "symbolic": 0.06953030000295257,
+      "total": 0.9026582000005874,
+      "wave": 0.00020460000087041408
+    },
+    "wave": {
+      "L": 24.0,
+      "analytic_tail_error_bound": 4.631783268908039e-21,
+      "computed": true,
+      "kind": "front",
+      "left": [
+        -1.0,
+        0.2916666666666667
+      ],
+      "profile_error": 0.0,
+      "right": [
+        1.0,
+        0.7083333333333334
+      ],
+      "speed": 0.0,
+      "started_from": "exact G2 profile"
+    }
+  },
+  "native_options": {
+    "conservation_method": "axis",
+    "default_region": false,
+    "region": [
+      161,
+      640
+    ]
+  },
+  "parameters": {
+    "mu": "29/8",
+    "rho": "0"
+  },
+  "profile_mode": "continued",
+  "specification_hash": "4537fbed2947808783626a1d6e85569366fe959d5ababb05921dac145ea3ccf8"
+}

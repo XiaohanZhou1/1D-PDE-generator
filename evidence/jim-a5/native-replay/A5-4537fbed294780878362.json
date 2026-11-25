@@ -1,0 +1,92 @@
+{
+  "coefficient_audit": {
+    "full_operator_max_error": 7.105427357601002e-15,
+    "integrated_operator_max_error": 7.105427357601002e-15,
+    "profile_rhs_max_error": 2.7205885114178763e-15
+  },
+  "computed_profile": {},
+  "instance_id": "A5-4537fbed294780878362",
+  "native": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        1.0,
+        4.440892098500626e-16
+      ],
+      "jump_residual": 8.512325619754944e-16,
+      "operator": "integrated",
+      "speed": 0.0
+    },
+    "decided_in_pass": null,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "file": "A5-4537fbed294780878362",
+    "label": "UNCERTAIN",
+    "name": "A5-4537fbed294780878362",
+    "parameters": {},
+    "reason": "wave: the boundary value problem did not converge: The maximum number of mesh nodes is exceeded.",
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "essential_spectrum": 0.08469250000052853,
+      "symbolic": 0.06707170000299811,
+      "total": 4.261966400001256
+    },
+    "wave": {
+      "kind": "front",
+      "left": [
+        -1.0,
+        0.2916666666666667
+      ],
+      "right": [
+        1.0,
+        0.7083333333333334
+      ]
+    }
+  },
+  "native_options": {
+    "conservation_method": "axis",
+    "default_region": false
+  },
+  "parameters": {
+    "mu": "29/8",
+    "rho": "0"
+  },
+  "profile_mode": "native",
+  "specification_hash": "4537fbed2947808783626a1d6e85569366fe959d5ababb05921dac145ea3ccf8"
+}

@@ -1,0 +1,101 @@
+{
+  "id": "A5_mu2.5",
+  "problem": "A5",
+  "family_version": "design-v1",
+  "solver_version": "1.0.0",
+  "parameters": {
+    "mu": 2.5,
+    "rho": 0
+  },
+  "wave": "(tanh z,H(tanh z)), u(0)=0",
+  "speed": 0,
+  "function_space": "unweighted L2(R)^2, domain H2(R)^2",
+  "convention": "No open-RHP spectrum and no nontranslation imaginary-axis eigenvalue; permit the essential edge and a simple continued translation zero.",
+  "label": "STABLE_MOD_TRANSLATION",
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "numerical_open_rhp_count": 0,
+  "roots": [
+    {
+      "lambda_value": [
+        6.012753751269292e-09,
+        5.663060155443278e-21
+      ],
+      "observed_error_scale": 6.603513478654205e-05,
+      "unit_local_count": true
+    }
+  ],
+  "positive_witness_indices": [],
+  "complete_numerical_count": true,
+  "search": {
+    "real_max": 106.0,
+    "imag_abs_max": 421.0,
+    "left": 0,
+    "left_bulge_radius": 0.08
+  },
+  "essential": "lambda=-k^2-i*a*k, a in {-2,-1,1,2}; also -Im(lambda)^2 < Re(lambda) < -Im(lambda)^2/4. Edge at 0.",
+  "failure_reason": null,
+  "settings": {
+    "cases": [
+      [
+        "A5",
+        2.5
+      ]
+    ],
+    "evans_grids": [
+      [
+        12,
+        0.16
+      ],
+      [
+        16,
+        0.16
+      ],
+      [
+        16,
+        0.08
+      ],
+      [
+        16,
+        0.04
+      ]
+    ],
+    "fd_grids": [
+      [
+        16,
+        0.1
+      ],
+      [
+        22,
+        0.1
+      ],
+      [
+        22,
+        0.05
+      ],
+      [
+        22,
+        0.025
+      ]
+    ],
+    "gates": {
+      "contour_relative_change": 0.25,
+      "eigenpair_residual": 1e-07,
+      "fd_condition_max": 10000,
+      "graph_residual": 1e-09,
+      "neutral_refinement_ratio": 0.15,
+      "profile_and_jacobian": 1e-10,
+      "shooting_relative_change": 0.1,
+      "tail_norm": 0.02
+    },
+    "local_radius": 0.08,
+    "origin_radius": 0.08,
+    "outer_initial_panels": 72,
+    "phase_limit": 0.56,
+    "sign_margin_factor": 10
+  },
+  "elapsed_seconds": 2.3220698999994056,
+  "artifacts": [
+    "A5_mu2.5/diagnostics.json",
+    "A5_mu2.5/contours.json.gz"
+  ]
+}

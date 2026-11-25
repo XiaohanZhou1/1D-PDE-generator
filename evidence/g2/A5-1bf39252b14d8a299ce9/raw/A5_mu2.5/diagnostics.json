@@ -1,0 +1,891 @@
+{
+  "checks": {
+    "jacobian_max": 5.329070518200751e-15,
+    "endpoint_speeds": [
+      [
+        2.0,
+        -1.0
+      ],
+      [
+        -1.9999999999999964,
+        0.9999999999999973
+      ]
+    ],
+    "endpoint_flux_max": 0.0,
+    "min_sampled_discriminant": 4.302773437500001,
+    "outgoing_obstruction": [
+      1.7233468286099864,
+      -1.616059379217274
+    ],
+    "essential_real_upper": 0,
+    "profile_residual_max": 0.0,
+    "neutral_fd": [
+      [
+        0.12,
+        0.029159173382259363
+      ],
+      [
+        0.06,
+        0.007373379718016985
+      ],
+      [
+        0.03,
+        0.0018527664310771228
+      ]
+    ],
+    "far_fields": [
+      {
+        "side": -1,
+        "lambda_value": [
+          0.0001,
+          0.0
+        ],
+        "unstable_dimension": 2,
+        "spatial_eigenvalues": [
+          [
+            2.000049998750062,
+            0.0
+          ],
+          [
+            -1.0000999900020007,
+            0.0
+          ],
+          [
+            -4.999875006249617e-05,
+            0.0
+          ],
+          [
+            9.99900019995001e-05,
+            0.0
+          ]
+        ],
+        "invariant_graph_residual": 6.794934886961683e-16
+      },
+      {
+        "side": -1,
+        "lambda_value": [
+          1.0,
+          0.0
+        ],
+        "unstable_dimension": 2,
+        "spatial_eigenvalues": [
+          [
+            2.414213562373095,
+            0.0
+          ],
+          [
+            -1.6180339887498951,
+            0.0
+          ],
+          [
+            -0.4142135623730946,
+            0.0
+          ],
+          [
+            0.6180339887498948,
+            0.0
+          ]
+        ],
+        "invariant_graph_residual": 6.037939749308378e-16
+      },
+      {
+        "side": -1,
+        "lambda_value": [
+          2.0,
+          3.0
+        ],
+        "unstable_dimension": 2,
+        "spatial_eigenvalues": [
+          [
+            -2.232050807568878,
+            -0.8660254037844386
+          ],
+          [
+            -0.9029767059950161,
+            -0.7882387605032138
+          ],
+          [
+            2.902976705995018,
+            0.7882387605032137
+          ],
+          [
+            1.2320508075688767,
+            0.8660254037844389
+          ]
+        ],
+        "invariant_graph_residual": 3.5311195804465443e-15
+      },
+      {
+        "side": 1,
+        "lambda_value": [
+          0.0001,
+          0.0
+        ],
+        "unstable_dimension": 2,
+        "spatial_eigenvalues": [
+          [
+            -2.00004999875006,
+            0.0
+          ],
+          [
+            1.0000999900019871,
+            0.0
+          ],
+          [
+            -9.999000199950134e-05,
+            0.0
+          ],
+          [
+            4.9998750062496256e-05,
+            0.0
+          ]
+        ],
+        "invariant_graph_residual": 4.690604767231769e-15
+      },
+      {
+        "side": 1,
+        "lambda_value": [
+          1.0,
+          0.0
+        ],
+        "unstable_dimension": 2,
+        "spatial_eigenvalues": [
+          [
+            -2.41421356237309,
+            0.0
+          ],
+          [
+            1.618033988749892,
+            0.0
+          ],
+          [
+            -0.6180339887498981,
+            0.0
+          ],
+          [
+            0.4142135623730939,
+            0.0
+          ]
+        ],
+        "invariant_graph_residual": 8.33357506137918e-15
+      },
+      {
+        "side": 1,
+        "lambda_value": [
+          2.0,
+          3.0
+        ],
+        "unstable_dimension": 2,
+        "spatial_eigenvalues": [
+          [
+            -2.902976705995017,
+            -0.788238760503216
+          ],
+          [
+            -1.2320508075688783,
+            -0.8660254037844356
+          ],
+          [
+            2.2320508075688683,
+            0.866025403784439
+          ],
+          [
+            0.9029767059950192,
+            0.7882387605032144
+          ]
+        ],
+        "invariant_graph_residual": 7.778817488588003e-15
+      }
+    ],
+    "asymmetric": [
+      {
+        "lengths": [
+          16,
+          12
+        ],
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.2780380888693798
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13937285620522744
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13937285620522744
+          }
+        ]
+      },
+      {
+        "lengths": [
+          12,
+          16
+        ],
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.27803808886847037
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13937285620477272
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13937285620477272
+          }
+        ]
+      }
+    ],
+    "max_sampled_relative_contour_change": 0.003211928406966369,
+    "origin_quadrature": {
+      "mean_Hprime": 0.3125,
+      "normal_forcing": -0.8541666666666667
+    },
+    "shooting": [
+      {
+        "L": 12,
+        "h": 0.0125,
+        "n": 216,
+        "count": 1,
+        "max_phase_step": 0.18636770237227604,
+        "min_abs": 0.06672213062373157
+      },
+      {
+        "L": 16,
+        "h": 0.008,
+        "n": 432,
+        "count": 1,
+        "max_phase_step": 0.09699940095160757,
+        "min_abs": 0.06672212855978019,
+        "max_relative_change": 3.093353528882403e-08
+      }
+    ]
+  },
+  "evans": [
+    {
+      "L": 12,
+      "h": 0.16,
+      "roots": [
+        [
+          1.6509720357567825e-06,
+          -1.5328747056646383e-26
+        ]
+      ],
+      "local": [
+        {
+          "resolved": true,
+          "count": 1,
+          "history": [
+            {
+              "samples": 24,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.28198134311729706
+            },
+            {
+              "samples": 48,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.14101843434251146
+            }
+          ]
+        }
+      ],
+      "outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.2780380888693799
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1393728562050001
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1393728562050001
+          }
+        ]
+      },
+      "max_graph_condition": 12.432000079920513,
+      "origin_slopes": [
+        [
+          0.01,
+          1.9384092329094775,
+          -1.3288063652370034e-13
+        ],
+        [
+          0.003,
+          1.9212934710419045,
+          -2.1439306045300716e-13
+        ],
+        [
+          0.001,
+          1.9163412773491084,
+          1.390976823215275e-13
+        ]
+      ],
+      "integrated_outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.2717550886400204
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1368658070823585
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1368658070823585
+          }
+        ]
+      },
+      "integrated_origin": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 24,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.26635355021764534
+          },
+          {
+            "samples": 48,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1332039532141788
+          }
+        ]
+      },
+      "continued_origin": [
+        1.6509720357130311e-06,
+        4.909539940246612e-28
+      ]
+    },
+    {
+      "L": 16,
+      "h": 0.16,
+      "roots": [
+        [
+          1.6509720354004533e-06,
+          -2.8351587474462114e-26
+        ]
+      ],
+      "local": [
+        {
+          "resolved": true,
+          "count": 1,
+          "history": [
+            {
+              "samples": 24,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.28198134311543105
+            },
+            {
+              "samples": 48,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.14101843434114722
+            }
+          ]
+        }
+      ],
+      "outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.27803808886892517
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13937285620477288
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13937285620477288
+          }
+        ]
+      },
+      "max_graph_condition": 12.432000079920513,
+      "origin_slopes": [
+        [
+          0.01,
+          1.9384092330824436,
+          -3.8752960803802737e-13
+        ],
+        [
+          0.003,
+          1.9212934712145,
+          1.0990606622777761e-14
+        ],
+        [
+          0.001,
+          1.9163412775216064,
+          -7.228910423147939e-14
+        ]
+      ],
+      "integrated_outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.27175508864002046
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13686580708190382
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13686580708190382
+          }
+        ]
+      },
+      "integrated_origin": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 24,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.2663535502079075
+          },
+          {
+            "samples": 48,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13320395320850031
+          }
+        ]
+      },
+      "continued_origin": [
+        1.6509720354366635e-06,
+        1.772937687494607e-27
+      ]
+    },
+    {
+      "L": 16,
+      "h": 0.08,
+      "roots": [
+        [
+          1.0227852321707532e-07,
+          2.947333907020787e-21
+        ]
+      ],
+      "local": [
+        {
+          "resolved": true,
+          "count": 1,
+          "history": [
+            {
+              "samples": 24,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.2819748953354911
+            },
+            {
+              "samples": 48,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.14101518474538954
+            }
+          ]
+        }
+      ],
+      "outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.2782278412423693
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13948377772157988
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13948377772157988
+          }
+        ]
+      },
+      "max_graph_condition": 12.432000079920513,
+      "origin_slopes": [
+        [
+          0.01,
+          1.9274730937495166,
+          -7.705853323348775e-13
+        ],
+        [
+          0.003,
+          1.9104550250331316,
+          8.089629594886818e-13
+        ],
+        [
+          0.001,
+          1.905531092989421,
+          -2.3489903172057875e-12
+        ]
+      ],
+      "integrated_outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.27194484101346467
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1369767285987109
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1369767285987109
+          }
+        ]
+      },
+      "integrated_origin": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 24,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.26636058702990406
+          },
+          {
+            "samples": 48,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13320751020586777
+          }
+        ]
+      },
+      "continued_origin": [
+        1.0227852287176963e-07,
+        2.4161309534407906e-23
+      ]
+    },
+    {
+      "L": 16,
+      "h": 0.04,
+      "roots": [
+        [
+          6.012753751269292e-09,
+          5.663060155443278e-21
+        ]
+      ],
+      "local": [
+        {
+          "resolved": true,
+          "count": 1,
+          "history": [
+            {
+              "samples": 24,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.2819744889175695
+            },
+            {
+              "samples": 48,
+              "count": 1,
+              "coarse": 1,
+              "max_phase_step": 0.14101497991675685
+            }
+          ]
+        }
+      ],
+      "outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.27824926241919457
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1394965959534602
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.1394965959534602
+          }
+        ]
+      },
+      "max_graph_condition": 12.432000079920513,
+      "origin_slopes": [
+        [
+          0.01,
+          1.9215062885226848,
+          1.6461753807517757e-12
+        ],
+        [
+          0.003,
+          1.904540976367306,
+          1.6129755030899298e-12
+        ],
+        [
+          0.001,
+          1.8996323083653066,
+          2.2269120755145046e-12
+        ]
+      ],
+      "integrated_outer": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 144,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.27196626218938047
+          },
+          {
+            "samples": 288,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13698954683059134
+          },
+          {
+            "samples": 292,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13698954683059134
+          }
+        ]
+      },
+      "integrated_origin": {
+        "resolved": true,
+        "count": 1,
+        "history": [
+          {
+            "samples": 24,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.2663610301443766
+          },
+          {
+            "samples": 48,
+            "count": 1,
+            "coarse": 1,
+            "max_phase_step": 0.13320773418819037
+          }
+        ]
+      },
+      "continued_origin": [
+        6.440309784949597e-09,
+        -1.0793305167864006e-21
+      ]
+    }
+  ],
+  "finite_difference": [
+    {
+      "L": 16,
+      "h": 0.1,
+      "roots": [
+        {
+          "value": [
+            0.00035372648649125565,
+            9.020562075079397e-17
+          ],
+          "residual": 4.829891887267146e-14,
+          "tail_l2": 0.0014190301358780705,
+          "nearby": [
+            [
+              0.00035372648649125565,
+              9.020562075079397e-17
+            ],
+            [
+              -0.27507219961311574,
+              2.5036769532582603e-12
+            ],
+            [
+              -0.2887912941595107,
+              1.4286835603449788e-13
+            ],
+            [
+              -0.35292194253434417,
+              -1.7401975693775995e-11
+            ]
+          ],
+          "condition": 5.3660675722085065
+        }
+      ]
+    },
+    {
+      "L": 22,
+      "h": 0.1,
+      "roots": [
+        {
+          "value": [
+            0.0003537264455079677,
+            -1.6479873021779667e-17
+          ],
+          "residual": 3.9188655411921686e-14,
+          "tail_l2": 0.0018233228325015623,
+          "nearby": [
+            [
+              0.0003537264455079677,
+              -1.6479873021779667e-17
+            ],
+            [
+              -0.26481631660233623,
+              1.626358336198619e-12
+            ],
+            [
+              -0.2705767870182816,
+              -3.016120339593975e-14
+            ],
+            [
+              -0.3096021562772015,
+              -1.2703889589599227e-11
+            ]
+          ],
+          "condition": 6.384098405002499
+        }
+      ]
+    },
+    {
+      "L": 22,
+      "h": 0.05,
+      "roots": [
+        {
+          "value": [
+            8.8012155492782e-05,
+            -1.0061396160665481e-16
+          ],
+          "residual": 1.5596325202906388e-13,
+          "tail_l2": 0.000457694263179762,
+          "nearby": [
+            [
+              8.8012155492782e-05,
+              -1.0061396160665481e-16
+            ],
+            [
+              -0.26473099980768205,
+              1.6807221413228657e-11
+            ],
+            [
+              -0.270484299496089,
+              8.435105912363294e-13
+            ],
+            [
+              -0.3096050270297285,
+              -8.266301488799033e-11
+            ]
+          ],
+          "condition": 6.395509993322809
+        }
+      ]
+    },
+    {
+      "L": 22,
+      "h": 0.025,
+      "roots": [
+        {
+          "value": [
+            2.1977020706239955e-05,
+            -1.207801220148852e-15
+          ],
+          "residual": 8.458504477224427e-13,
+          "tail_l2": 0.00011465929655424606,
+          "nearby": [
+            [
+              2.1977020706239955e-05,
+              -1.207801220148852e-15
+            ],
+            [
+              -0.26470966148478686,
+              -1.6127643968563699e-10
+            ],
+            [
+              -0.270461203907687,
+              1.6881825798398253e-11
+            ],
+            [
+              -0.3096056751956978,
+              -3.117124133464322e-09
+            ]
+          ],
+          "condition": 6.398364275924923
+        }
+      ]
+    }
+  ]
+}

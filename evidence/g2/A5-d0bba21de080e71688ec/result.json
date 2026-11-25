@@ -1,0 +1,46 @@
+{
+  "artifact_refs": [
+    "settings.json",
+    "solver.log",
+    "raw/A5_mu6/case.json",
+    "raw/environment.json",
+    "raw/A5_mu6/diagnostics.json",
+    "raw/A5_mu6/contours.json.gz"
+  ],
+  "complete_numerical_count": true,
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "failure_reason": null,
+  "instance_id": "A5-d0bba21de080e71688ec",
+  "label": "STABLE_MOD_TRANSLATION",
+  "post_solver_review": {
+    "disposition": "HOLD",
+    "finding": "Fixed-parameter shock result. Interval-wide finite-frequency exclusion remains open."
+  },
+  "runtime_seconds": 2.898297300000195,
+  "schema_version": "0.1-draft",
+  "settings_hash": "418e8910a26916c7faa5a079e3bbbbd564c150b54673524f7ca12b68702b1b78",
+  "solver_status": "COMPLETED",
+  "solver_version": "1.0.0",
+  "specification_hash": "d0bba21de080e71688ecf3a854ac163b8e2c73d2df27957354856fa6a3ad0c1c",
+  "spectral_search": {
+    "imag_abs_max": 1557.0,
+    "left": 0,
+    "left_bulge_radius": 0.08,
+    "real_max": 390.0
+  },
+  "unstable_count": 0,
+  "verification": {
+    "native_elapsed_seconds": 2.2629596999995556,
+    "positive_witness_indices": [],
+    "roots": [
+      {
+        "lambda_value": [
+          1.2373085960923062e-08,
+          2.944799163247469e-21
+        ],
+        "observed_error_scale": 0.0001282224548336654,
+        "unit_local_count": true
+      }
+    ]
+  }
+}

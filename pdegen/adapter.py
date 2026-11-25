@@ -10,7 +10,7 @@ import time
 from fractions import Fraction
 from .contract import ROOT, digest, validate, schema_check, write_json
 from .algebra import evaluate
-from .families import a1, a5_fixture, dispatch_limitation
+from .families import a1, a5, dispatch_limitation
 
 def check_release(root):
     for name, expected in json.loads((ROOT/"schemas/solver-release-files.json").read_text()).items():
@@ -43,8 +43,25 @@ def parity(item, model):
                 same(array(row,wave_env),numeric[:,i,:])
     else:
         same(-array(eq["G"],off),model.flux(perturbed))
-        for i,row in enumerate(item["linearised_operator"]["B"]):
-            same(array(row,wave_env),-model.jac(X[:,0])[:,i,:])
+        operator = item["linearised_operator"]
+        same(array(operator["D"],wave_env),np.ones_like(X))
+        same(item["target_wave"]["speed"],model.speed)
+        u = X[:,0]
+        J = model.jac(u)
+        # Independently differentiate the native Jacobian along the native profile.
+        step = 1e-5
+        dJ = (model.jac(model.profile(z+step)[:,0]) -
+              model.jac(model.profile(z-step)[:,0]))/(2*step)
+        for i,(b_row,c_row) in enumerate(zip(operator["B"],operator["C"],strict=True)):
+            same(array(b_row,wave_env),-J[:,i,:])
+            np.testing.assert_allclose(array(c_row,wave_env),-dJ[:,i,:],rtol=2e-8,atol=2e-8)
+        for sign,side in ((-1,"left"),(1,"right")):
+            env = dict(s=0,t=sign)
+            end = array(item["target_wave"]["endstates"][(sign+1)//2],env)
+            same(end,model.profile(np.full(z.shape,30.0*sign)))
+            tail = item["far_field_data"]["coefficients"][side]
+            for i,b_row in enumerate(tail["B"]):
+                same(array(b_row,env),-model.jac(end[:,0])[:,i,:])
 
 
 def prepare(item, root):
@@ -80,7 +97,7 @@ def execute(item, solver, dest):
         settings_hash=None,label=None,evidence_grade=None,unstable_count=None,complete_numerical_count=False,
         spectral_search=None,verification=None,artifact_refs=[],runtime_seconds=0,failure_reason=None,
         post_solver_review=dict(disposition="HOLD",finding="Awaiting compatible solver."))
-    model = a1(**item["parameters"]) if item["family_id"]=="A1" else a5_fixture()
+    model = a1(**item["parameters"]) if item["family_id"]=="A1" else a5(**item["parameters"])
     limitation = dispatch_limitation(model)
     if limitation:
         result["failure_reason"]=limitation
@@ -118,7 +135,7 @@ def execute(item, solver, dest):
             elif item["parameters"].get("q")=="0":
                 finding = "Analytically reducible calibration point. Exclude from proof training."
             elif raw["problem"]=="A5":
-                finding = "Fixed shock fixture only. Interval-wide finite-frequency exclusion remains open."
+                finding = "Fixed-parameter shock result. Interval-wide finite-frequency exclusion remains open."
             else:
                 witnesses = [raw["roots"][i]["lambda_value"] for i in raw["positive_witness_indices"]]
                 nonreal = sum(abs(im)>raw["settings"]["local_radius"] for _,im in witnesses)
@@ -148,7 +165,8 @@ def main():
     args=parser.parse_args()
     manifest=json.loads((args.examples/"manifest.json").read_text())
     paths=[args.examples/"instances"/(k+".json") for k in manifest["instances"]]
-    paths.append(args.examples/manifest["fixture"])
+    if "fixture" in manifest:
+        paths.append(args.examples/manifest["fixture"])
     failed=False
     for path in paths:
         item=json.loads(path.read_text())

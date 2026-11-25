@@ -1,10 +1,11 @@
 import hashlib
 import json
+from fractions import Fraction
 from pathlib import Path
 from jsonschema import Draft202012Validator
 from . import VERSION
-from .algebra import poly, encode, reduce_wave, dz
-from .families import a1, a5_fixture, dispatch_limitation
+from .algebra import poly, encode, reduce_wave, dz, t
+from .families import a1, a5, dispatch_limitation
 
 ROOT = Path(__file__).resolve().parents[1]
 A1_CAP = ["A1.design-v1", "expanded.second_order", "whole_line.unweighted",
@@ -36,6 +37,43 @@ def schema_check(name, value):
 def require_zero(values, message):
     if any(reduce_wave(x).terms for x in values):
         raise ValueError(message)
+
+
+def check_a5_shock(model, U1, B, C, wave_value):
+    D, A, F, G = (model[key] for key in ("D","A","F","G"))
+    mu, rho = (model["params"][key] for key in ("mu","rho"))
+    if D != [1,1] or A != [0,0] or any(poly(f).terms for f in F):
+        raise ValueError("A5 requires identity viscosity and a pure conservative flux")
+    center = {"s":1,"t":0}
+    if (model["wave"][0].at(center) != 0 or U1[0].at(center) <= 0 or model["c"] != 0):
+        raise ValueError("shock phase or speed")
+    left, right = (dict(zip(model["names"],end,strict=True)) for end in model["ends"])
+    if any(poly(g).at(right)-poly(g).at(left) != model["c"]*(left[name]-right[name])
+           for name,g in zip(model["names"],G,strict=True)):
+        raise ValueError("A5 Rankine–Hugoniot identity")
+    # The pinned native model uses zero far-field flux, fixing the constant in the first integral.
+    if any(poly(g).at(left) for g in G):
+        raise ValueError("A5 requires zero far-field flux")
+    require_zero([derivative+wave_value(g) for derivative,g in zip(U1,G,strict=True)],
+                 "integrated shock identity")
+
+    # B = -J, where J is the on-wave physical flux Jacobian.
+    trace = -B[0][0]-B[1][1]
+    determinant = B[0][0]*B[1][1]-B[0][1]*B[1][0]
+    discriminant = trace**2-4*determinant
+    expected = 9*t*t+4*mu*(1+Fraction(1,2)*t)*(1+Fraction(5,4)*t)*(1-t*t)
+    require_zero([discriminant-expected], "A5 on-wave hyperbolicity formula")
+    if not (1 <= mu <= 6 and rho == 0):
+        raise ValueError("A5 strict hyperbolicity bound requires the reviewed shock branch")
+    # On [-1,-4/5], 9t² >= 144/25 and the negative term is bounded by 54/25.
+    # On [-4/5,1], both terms are nonnegative and they cannot vanish together.
+    for sign in (-1,1):
+        tail = {"s":0,"t":sign}
+        # Roots of the endpoint characteristic polynomial are -2*sign and sign.
+        # One incoming characteristic at each end and a 2+2 spatial split in the open RHP.
+        if (trace.at(tail) != -sign or determinant.at(tail) != -2
+                or any(entry.at(tail) for row in C for entry in row)):
+            raise ValueError("A5 endstate characteristic speeds or spectral limits")
 
 
 def construct(model, seed):
@@ -80,9 +118,7 @@ def construct(model, seed):
         if any(v != encode(dict(B=expected_B,C=expected_C)) for v in far.values()):
             raise ValueError("A1 analytic far-field bound does not apply")
     else:
-        if U[0].at({"s":1,"t":0}) or c!=0:
-            raise ValueError("shock phase or speed")
-        require_zero([U1[i]+wave_value(G[i]) for i in range(n)], "integrated shock identity")
+        check_a5_shock(model,U1,B,C,wave_value)
     family = model["family"]
     wave_id = "sech-maximum-0" if pulse else "tanh-zero-0"
     task = "unstable_count" if pulse else "binary_stability"
@@ -103,7 +139,7 @@ def construct(model, seed):
                                     "parabolas for b=-2,-1,1,2 and index region -Im^2<Re<-Im^2/4",
                                     rhp_splitting=[n,n]),
                 stability_question="Determine N_+ at these parameters, counting algebraic multiplicity."
-                                   if pulse else "Is this shock spectrally stable modulo translation at mu=3?",
+                                   if pulse else f"Is this shock spectrally stable modulo translation at mu={params['mu']}?",
                 task_type=task, stability_convention="open_RHP_count" if pulse else "unweighted_shock_edge",
                 neutral_mode_policy="Exclude all axis modes from N_+; record translation and extra modes."
                                     if pulse else "Permit essential edge at 0 and simple continued translation only.",
@@ -117,7 +153,8 @@ def construct(model, seed):
                     screen="reducible seed" if calibration else
                         ("new feedback requires reduction review" if feedback else
                          ("coupled operator; fixed-point count needs expert review" if pulse else
-                          "contract fixture; finite-frequency exclusion requires review")),
+                          ("contract fixture; finite-frequency exclusion requires review" if params["mu"]==3 else
+                           "A5 parameter variant; finite-frequency exclusion requires review"))),
                     grouping=family+".explicit-family", training_admission="HOLD"),
                 validity_checks=dict(profile="PASS",endstates="PASS",phase="PASS",diffusion="PASS",
                     linearisation="PASS",translation="PASS", global_nonlinear_existence="UNVERIFIED",
@@ -137,7 +174,7 @@ def validate(item):
     if item["family_id"] == "A1":
         model = a1(p["q"],p["a"],p["beta"])
     else:
-        model = a5_fixture()
+        model = a5(**p)
     if item != construct(model,item["seed"]):
         raise ValueError("record differs from the versioned construction or canonical hash")
     return item

@@ -1,0 +1,450 @@
+{
+  "a5_wrong_target": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        1.0,
+        0.049999999999996714
+      ],
+      "jump_residual": 0.0,
+      "operator": "integrated",
+      "speed": 0.0
+    },
+    "decided_in_pass": null,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "file": "A5-7675e3315ff5c3041444",
+    "label": "UNCERTAIN",
+    "name": "A5-7675e3315ff5c3041444",
+    "parameters": {
+      "rho": 0.05
+    },
+    "reason": "wave: unfolding fitted rho=6.31304424e-14 differs from target 0.05",
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "essential_spectrum": 0.09453539999958593,
+      "symbolic": 0.07364409999718191,
+      "total": 0.2914717000021483
+    },
+    "wave": {
+      "kind": "front",
+      "left": [
+        -1.0,
+        0.2916666666666667
+      ],
+      "right": [
+        1.0,
+        0.7083333333333334
+      ]
+    }
+  },
+  "p_system": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "closed_half_plane": {
+      "counts": [
+        0,
+        0,
+        0
+      ],
+      "evaluations": 768,
+      "h_fine": 0.1014560749425671,
+      "label": "STABLE",
+      "qualifier": "algebraic decay",
+      "reason": "no zero of the determinant in 0 <= Re(lambda) <= 0.06572, |Im(lambda)| <= 0.948 (two meshes and a shorter domain)",
+      "refinement_level": 0,
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 2.013062641111996,
+          "bK": 0.3673748002799637,
+          "c0": 0.0,
+          "c2": 0.0,
+          "d": 1.0,
+          "d1": 1.7763568394002505e-15,
+          "lam0": 0.0,
+          "reason": null,
+          "s1": 0.052005341284150575
+        },
+        "source": "energy estimate",
+        "x_max": 0.06571810477348757,
+        "x_min": 0.0,
+        "y_max": 0.9479994707447553
+      },
+      "resolved": [
+        true,
+        true,
+        true
+      ],
+      "roots": [],
+      "splitting_dimension": 2,
+      "threshold": 0.0
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        0.7880804897803273,
+        -1.0
+      ],
+      "jump_residual": 1.1102230246251565e-16,
+      "method": "determinant on the closed half-plane",
+      "operator": "integrated",
+      "speed": 0.7880804897803273,
+      "transport": {
+        "left": [
+          -0.3951354668395959,
+          1.9712964464002505
+        ],
+        "right": [
+          0.27305583101210906,
+          1.3031051485485456
+        ]
+      }
+    },
+    "decided_in_pass": 2,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "evaluations": 768,
+    "file": "..\\..\\work\\jim-a5\\formal\\solver\\problems\\p_system_shock.py",
+    "label": "STABLE",
+    "name": "p_system_shock",
+    "parameters": {
+      "gamma": 1.4,
+      "nu": 1.0,
+      "vm": 1.0,
+      "vp": 2.0
+    },
+    "qualifier": "algebraic decay",
+    "reason": "conservation form, integrated operator on the closed half-plane Re(lambda) >= 0: no zero of the determinant in 0 <= Re(lambda) <= 0.06572, |Im(lambda)| <= 0.948 (two meshes and a shorter domain)",
+    "roots": [],
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "closed_half_plane": 0.9318673000016133,
+      "essential_spectrum": 0.03402479999931529,
+      "symbolic": 0.04218630000104895,
+      "total": 1.0941180000008899,
+      "wave": 0.08595290000084788
+    },
+    "wave": {
+      "L": 75.89387767378402,
+      "amplitude": 0.4125348599071772,
+      "computed": true,
+      "domain_extensions": 0,
+      "index_iota": 1,
+      "kind": "front",
+      "left": [
+        1.0,
+        0.0
+      ],
+      "nodes": 1871,
+      "profile_error": 8.609342128096387e-10,
+      "residual_rms_max": 4.980427941558245e-10,
+      "right": [
+        2.0,
+        -0.7880804897803273
+      ],
+      "slowest_rate": 0.2730558310121086,
+      "speed": 0.7880804897803273,
+      "speed_error": 0.0,
+      "speed_first_solve": 0.0,
+      "stable_dim_right": 2,
+      "started_from": "guess",
+      "tail_error": 9.448710702741892e-10,
+      "unstable_dim_left": 1
+    }
+  },
+  "triangular": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "closed_half_plane": {
+      "counts": [
+        null,
+        null,
+        null
+      ],
+      "evaluations": 2772,
+      "h_fine": 0.025,
+      "label": "UNCERTAIN",
+      "qualifier": "algebraic decay",
+      "reason": "the counts differ between the meshes or the domains, or are not resolved",
+      "refinement_level": 2,
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 3.7024591579598067,
+          "bK": 1.49999999199992,
+          "c0": 0.0,
+          "c2": 0.0,
+          "d": 1.0,
+          "d1": 0.0,
+          "lam0": 0.0,
+          "reason": null,
+          "s1": 2.2679691444528176
+        },
+        "source": "energy estimate",
+        "x_max": 1.8661330228489839,
+        "x_min": 0.0,
+        "y_max": 8.359193246672557
+      },
+      "resolved": [
+        false,
+        false,
+        false
+      ],
+      "roots": [],
+      "splitting_dimension": 2,
+      "threshold": 0.0
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        1.0,
+        0.0
+      ],
+      "jump_residual": 0.0,
+      "method": "determinant on the closed half-plane",
+      "operator": "integrated",
+      "speed": 0.0,
+      "transport": {
+        "left": [
+          -2.0,
+          1.0
+        ],
+        "right": [
+          -1.0,
+          2.0
+        ]
+      }
+    },
+    "decided_in_pass": null,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "evaluations": 2772,
+    "file": "triangular_saddle_shock",
+    "label": "UNCERTAIN",
+    "name": "triangular_saddle_shock",
+    "parameters": {
+      "rho": 0.0
+    },
+    "reason": "conservation form, integrated operator on the closed half-plane Re(lambda) >= 0: the counts differ between the meshes or the domains, or are not resolved",
+    "roots": [],
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "closed_half_plane": 0.5147116000007372,
+      "essential_spectrum": 0.030800900000031106,
+      "symbolic": 0.0339897999947425,
+      "total": 0.642077700002119,
+      "wave": 0.06253819999983534
+    },
+    "wave": {
+      "L": 10.361632918473205,
+      "computed": true,
+      "kind": "front",
+      "left": [
+        -1.0,
+        0.5
+      ],
+      "nodes": 2693,
+      "profile_error": 2.3531887549665953e-10,
+      "right": [
+        1.0,
+        0.5
+      ],
+      "speed": 0.0,
+      "started_from": "parameter_unfolding",
+      "tail_error": 2.0000200384728828e-09,
+      "target_equation_residual": 8.795813521977891e-10,
+      "target_pde_residual": 1.6186651184413314e-06,
+      "unfolding": {
+        "fit_tolerance": 1e-07,
+        "fitted": -3.6491410001181975e-18,
+        "guess": 0.02,
+        "normal_variation_max": 1.0,
+        "parameter": "rho",
+        "target": 0.0
+      }
+    }
+  },
+  "triangular_phase_aligned_max_error": 1.0491496560405267e-11,
+  "wrong_target": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        1.0,
+        0.05
+      ],
+      "jump_residual": 0.0,
+      "operator": "integrated",
+      "speed": 0.0
+    },
+    "decided_in_pass": null,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "file": "triangular_saddle_shock",
+    "label": "UNCERTAIN",
+    "name": "triangular_saddle_shock",
+    "parameters": {
+      "rho": 0.05
+    },
+    "reason": "wave: unfolding fitted rho=-3.649141e-18 differs from target 0.05",
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "essential_spectrum": 0.04287770000519231,
+      "symbolic": 0.030399099996429868,
+      "total": 0.13368810000247322
+    },
+    "wave": {
+      "kind": "front",
+      "left": [
+        -1.0,
+        0.5
+      ],
+      "right": [
+        1.0,
+        0.5
+      ]
+    }
+  }
+}

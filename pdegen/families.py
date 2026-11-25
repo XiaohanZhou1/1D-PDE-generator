@@ -31,9 +31,10 @@ def a1(q, a, beta=0):
                 wave=[s,-s*t,s*s,s**3], ends=[[0]*4,[0]*4])
 
 
-def a5_fixture():
-    # One contract fixture. The rho unfolding belongs to the design, fixed at zero here.
-    mu, rho = Q(3), Q(0)
+def a5(mu, rho=0):
+    mu, rho = map(rational, (mu, rho))
+    if not (1 <= mu <= 6 and rho == 0):
+        raise ValueError("A5 shock branch requires 1 <= mu <= 6 and rho = 0")
     u, v = map(symbol, ["u","v"])
     def H(x):
         return Q(1,2)*x*x + Q(5,24)*x**3
@@ -44,8 +45,15 @@ def a5_fixture():
                 wave=[t,H(t)], ends=[[-1,H(-1)],[1,H(1)]])
 
 
+def a5_fixture():
+    return a5(3)
+
+
 def dispatch_limitation(model):
     if model["family"] == "A5":
+        mu = model["params"]["mu"]
+        if Q.from_float(float(mu)) != mu:
+            return "Native binary64 conversion would change exact mu."
         return None
     q, a, beta = (model["params"][k] for k in ("q","a","beta"))
     if beta:
