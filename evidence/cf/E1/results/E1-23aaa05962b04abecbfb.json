@@ -1,0 +1,211 @@
+{
+  "certificate": {
+    "candidate_spatial_root": "2",
+    "coverage": "All Re(lambda)>0 on the half-line with the specified interface condition.",
+    "method": "Exact boundary determinant with Dirichlet resolvent",
+    "neutral": "constant interface displacement",
+    "positive_eigenvalue": "3",
+    "proof": "docs/cf-calibration.md#e1--moving-boundary"
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "E1-23aaa05962b04abecbfb",
+  "label": "UNSTABLE",
+  "native_check": {
+    "record": {
+      "classification": {
+        "details": {
+          "components": 1,
+          "constraints": 0,
+          "first_order_dimension": 2,
+          "orders": [
+            2
+          ],
+          "space_order": 2,
+          "time_order": 1
+        },
+        "reasons": [
+          "local system on x < s(t) with a Stefan condition"
+        ],
+        "sub_solver": "F",
+        "supported": true
+      },
+      "decided_in_pass": 1,
+      "essential": {
+        "s_ess": -1.0,
+        "sides": {
+          "left": {
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "limit_at_infinity": null,
+            "rounding": 1.4210854715202004e-14,
+            "s": -1.0
+          },
+          "right": {
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "limit_at_infinity": null,
+            "rounding": 1.4210854715202004e-14,
+            "s": -1.0
+          }
+        }
+      },
+      "evaluations": 128,
+      "file": "solver/problems/stefan_linear.py",
+      "label": "UNSTABLE",
+      "name": "stefan_linear",
+      "parameters": {
+        "kappa": -3.0
+      },
+      "pass_1": {
+        "W": null,
+        "cells_fine": 36,
+        "complete_count": false,
+        "counts_consistent": null,
+        "h_coarse": 0.4,
+        "h_fine": 0.2,
+        "m0": null,
+        "open_rhp_count": null,
+        "outcome": "UNSTABLE",
+        "parity": {
+          "odd": true,
+          "signs": {
+            "coarse": [
+              1,
+              -1
+            ],
+            "fine": [
+              1,
+              -1
+            ]
+          }
+        },
+        "reason": "parity index: the number of real positive roots is odd; one of them is located and confirmed",
+        "refinement_level": 0,
+        "roots": [
+          {
+            "coarse": [
+              3.0005421815122726,
+              1.375052680914128e-29
+            ],
+            "error": 0.000508326668670768,
+            "multiplicity_in_count": 1,
+            "radius": 0.05,
+            "seed": [
+              3.000033854935437,
+              0.0
+            ],
+            "source": "parity",
+            "status": "unstable",
+            "value": [
+              3.000033854935437,
+              0.0
+            ],
+            "winding_coarse": 1,
+            "winding_fine": 1
+          }
+        ],
+        "shortcut": "parity",
+        "translation_root": null
+      },
+      "reason": "parity index: the number of real positive roots is odd; one of them is located and confirmed",
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 8.864814775044784e-17,
+          "bK": 0.0,
+          "boundary_types": [
+            "D"
+          ],
+          "c0": -1.0,
+          "c2": 0.0,
+          "d": 1.0,
+          "d1": 1.4210854715202004e-14,
+          "kappa": 3.0,
+          "kappa_r": 0.0,
+          "lam0": 1.0,
+          "m2": 1.0,
+          "psi2": 0.707110276930276,
+          "psi_h": 0.0,
+          "reason": null,
+          "rho_b": 0.0,
+          "s1": 1.5777218104420236e-30,
+          "sigma_b": 0.0
+        },
+        "origin_radius": 0.05,
+        "source": "energy estimate",
+        "x_max": 200.14736882331403,
+        "x_min": -0.1,
+        "y_max": 802.4643205439861
+      },
+      "roots": [
+        {
+          "coarse": [
+            3.0005421815122726,
+            1.375052680914128e-29
+          ],
+          "error": 0.000508326668670768,
+          "multiplicity_in_count": 1,
+          "radius": 0.05,
+          "seed": [
+            3.000033854935437,
+            0.0
+          ],
+          "source": "parity",
+          "status": "unstable",
+          "value": [
+            3.000033854935437,
+            0.0
+          ],
+          "winding_coarse": 1,
+          "winding_fine": 1
+        }
+      ],
+      "solver_version": "2.18.0",
+      "space": "unweighted L2(R; C^n)",
+      "splitting_dimension": 2,
+      "timings": {
+        "essential_spectrum": 0.002939400000286696,
+        "pass_1": 0.043080100000224775,
+        "symbolic": 0.00815420000026279,
+        "total": 0.09233159999985219,
+        "wave": 0.03813669999999547
+      },
+      "wave": {
+        "L": 21.785317041244475,
+        "amplitude": 1.0,
+        "boundary_residual": 0.0,
+        "computed": true,
+        "domain_extensions": 0,
+        "kind": "semi",
+        "left": [
+          0.0
+        ],
+        "nodes": 1207,
+        "profile_error": 9.183501875620337e-11,
+        "residual_rms_max": 4.982673011920573e-10,
+        "right": [
+          1.0
+        ],
+        "slowest_rate": 0.9512492197250394,
+        "speed": 8.864814775044784e-17,
+        "speed_error": 7.870750682488614e-19,
+        "speed_first_solve": 8.94352228186967e-17,
+        "speed_is_unknown": true,
+        "stefan_residual": 8.864814775044784e-17,
+        "tail_error": 3.457461255811491e-10,
+        "unstable_dim_far": 1
+      }
+    },
+    "status": "RUN"
+  },
+  "open_rhp_count": 1,
+  "parameters": {
+    "case": "standing",
+    "decay": "1",
+    "kappa": "-3",
+    "speed": "0"
+  },
+  "reason": "The admissible spatial root 2 gives one simple eigenvalue lambda=3.",
+  "specification_hash": "23aaa05962b04abecbfb18771ecc1b4bf8dbe92e3224e0e8a06743bf608edf9c"
+}

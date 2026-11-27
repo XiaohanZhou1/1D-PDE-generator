@@ -1,0 +1,60 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "bands": 2,
+    "bloch_domain": "H2_per_0_L_C2",
+    "bloch_wavenumber": "[-q/2,q/2)",
+    "form": "identity_second_order_plus_periodic_potential",
+    "function_space": "unweighted_L2_R_C2",
+    "gauge": "periodic_rotation_R(q*x)",
+    "operator_domain": "H2_R_C2",
+    "potential": "q_squared*I-2*U*U^T",
+    "sideband_shift": "k=m*q+xi"
+  },
+  "equations": {
+    "diffusion": "identity_2",
+    "form": "X_t=X_xx+X-(X^T X)X",
+    "variables": [
+      "u",
+      "v"
+    ]
+  },
+  "family_id": "B1",
+  "instance_id": "B1-25673d590e86fad70dbe",
+  "neutral_mode_policy": "Record the phase mode and identify the quartic Eckhaus edge.",
+  "novelty_assessment": {
+    "grouping": "B1.eckhaus",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "q_squared": "1/4"
+  },
+  "references": [
+    "https://doi.org/10.1137/18M1174751"
+  ],
+  "schema_version": "bloch-0.1",
+  "seed": 20261124,
+  "specification_hash": "25673d590e86fad70dbec54907e8cd96ef6008fd9c5b85cd389b0186f7f59984",
+  "stability_question": "Compare co-periodic and full-line spectral stability.",
+  "structure_id": "B1.real-ginzburg-landau",
+  "target_wave": {
+    "amplitude_squared": "3/4",
+    "form": "rotating_roll",
+    "period": "2*pi/sqrt(q_squared)",
+    "phase": "U(0)=(sqrt(a),0)",
+    "profile": "sqrt(a)*(cos(q*x),sin(q*x))",
+    "speed": 0
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "diffusion": "PASS",
+    "linearisation": "PASS",
+    "period": "PASS",
+    "phase": "PASS",
+    "phase_mode": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}

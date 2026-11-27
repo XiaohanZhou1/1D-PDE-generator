@@ -1,0 +1,57 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "bloch_domain": "H4_per_0_L_C",
+    "bloch_wavenumber": "[-q/2,q/2]",
+    "fiber": "r-(1+(partial_x+i*xi)^2)^2-3*U^2",
+    "form": "selfadjoint_fourth_order",
+    "function_space": "unweighted_L2_R_C",
+    "operator_domain": "H4_R_C",
+    "potential": "-3*U^2"
+  },
+  "equations": {
+    "form": "u_t=r*u-(1+partial_x^2)^2*u-u^3",
+    "r": "branch value selected by q and first_cosine_amplitude",
+    "variables": [
+      "u"
+    ]
+  },
+  "family_id": "B2",
+  "instance_id": "B2-01d1228f5ecef5091040",
+  "neutral_mode_policy": "Identify U_x at xi=0; retain uncertainty without a full exclusion proof.",
+  "novelty_assessment": {
+    "grouping": "B2.swift-hohenberg",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "first_cosine_amplitude": "2/5",
+    "q": "11/10"
+  },
+  "references": [
+    "https://doi.org/10.1007/s002200050230"
+  ],
+  "schema_version": "periodic-0.1",
+  "seed": 20261124,
+  "specification_hash": "01d1228f5ecef5091040c83578c9e655f75a40f3acf6a5923ad7af5c2031c9dd",
+  "stability_question": "Compare the co-periodic spectrum and the full-line Bloch spectrum.",
+  "structure_id": "B2.swift-hohenberg",
+  "target_wave": {
+    "branch": "primary branch from (r=(1-q^2)^2,U=0) at fixed q",
+    "form": "stationary_roll",
+    "period": "2*pi/q",
+    "phase": "even in theta=q*x with positive first cosine coefficient",
+    "speed": 0,
+    "symmetry": "U(theta+pi)=-U(theta)"
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "linearisation": "PASS",
+    "period": "UNVERIFIED",
+    "phase": "UNVERIFIED",
+    "phase_mode": "UNVERIFIED",
+    "profile": "UNVERIFIED",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}

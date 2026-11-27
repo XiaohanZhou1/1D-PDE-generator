@@ -1,0 +1,89 @@
+{
+  "analytical_label": "UNSTABLE",
+  "coperiodic_label": "STABLE",
+  "evidence_grade": "EXACT_LINEAR_SPECTRUM",
+  "instability_cutoff_squared": "4/25",
+  "instance_id": "B1-bf07853c4c357df29daa",
+  "label": "UNSTABLE",
+  "numerical_fiber_checks": [
+    {
+      "exact_top_three": [
+        0.0,
+        -0.03667243369661634,
+        -0.03667243369661634
+      ],
+      "finite_difference_top_three": [
+        [
+          0.0002890556858901926,
+          -0.03608766930869651,
+          -0.03608766930869651
+        ],
+        [
+          7.228133579270099e-05,
+          -0.036526331551824893,
+          -0.03652633155192219
+        ],
+        [
+          1.8071422552148535e-05,
+          -0.036635913725037814,
+          -0.036635913725037814
+        ]
+      ],
+      "max_absolute_error": [
+        0.0005847643879198297,
+        0.00014610214479144484,
+        3.651997157852471e-05
+      ],
+      "nodes": [
+        64,
+        128,
+        256
+      ],
+      "status": "PASS",
+      "xi": 0.0
+    },
+    {
+      "exact_top_three": [
+        0.003520299625402497,
+        1.1102230246251568e-17,
+        -0.12622359185152335
+      ],
+      "finite_difference_top_three": [
+        [
+          0.0038553162729401545,
+          0.00044917029077121167,
+          -0.1254993909997027
+        ],
+        [
+          0.0036040645213471782,
+          0.000112274289938375,
+          -0.12604276437909112
+        ],
+        [
+          0.0035412415196332675,
+          2.806742670496396e-05,
+          -0.12617839890279497
+        ]
+      ],
+      "max_absolute_error": [
+        0.00072420085182065,
+        0.00018082747243222674,
+        4.5192948728373095e-05
+      ],
+      "nodes": [
+        64,
+        128,
+        256
+      ],
+      "status": "PASS",
+      "xi": 0.19999999999999998
+    }
+  ],
+  "open_rhp_count": null,
+  "parameters": {
+    "q_squared": "9/25"
+  },
+  "phase_diffusion_coefficient": "-1/8",
+  "reason": "The upper Bloch band has a positive sideband.",
+  "specification_hash": "bf07853c4c357df29daaa26350432fe46af98bf3f90b46244a43b8b27c515f8b"
+}

@@ -1,0 +1,48 @@
+{
+  "rows": [
+    {
+      "certificate": "certificates/E3-1c0d1a007615d33855a9.json",
+      "difficulty_review": "PENDING",
+      "evidence_grade": "RIGOROUSLY_CERTIFIED",
+      "gain": "5",
+      "instance": "instances/E3-1c0d1a007615d33855a9.json",
+      "instance_id": "E3-1c0d1a007615d33855a9",
+      "label": "STABLE",
+      "open_rhp_count": 0,
+      "specification_hash": "1c0d1a007615d33855a98485ba6a11214f5d9e36d482f79f6082c63fc01697be"
+    },
+    {
+      "certificate": "certificates/E3-63f34479a982e8fc84ee.json",
+      "difficulty_review": "PENDING",
+      "evidence_grade": "RIGOROUSLY_CERTIFIED",
+      "gain": "6",
+      "instance": "instances/E3-63f34479a982e8fc84ee.json",
+      "instance_id": "E3-63f34479a982e8fc84ee",
+      "label": "STABLE",
+      "open_rhp_count": 0,
+      "specification_hash": "63f34479a982e8fc84ee65cf91c0082643d130a6c6b62cd98c81b1feaaed46aa"
+    },
+    {
+      "certificate": "certificates/E3-b2bc7d23aa983283ae5e.json",
+      "difficulty_review": "PENDING",
+      "evidence_grade": "RIGOROUSLY_CERTIFIED",
+      "gain": "8",
+      "instance": "instances/E3-b2bc7d23aa983283ae5e.json",
+      "instance_id": "E3-b2bc7d23aa983283ae5e",
+      "label": "UNSTABLE",
+      "open_rhp_count": 2,
+      "specification_hash": "b2bc7d23aa983283ae5eb4c8c1c1ac0a382d887108d4ef23e5a2765dcf87b9d6"
+    },
+    {
+      "certificate": "certificates/E3-f9a1146a044d497f0762.json",
+      "difficulty_review": "PENDING",
+      "evidence_grade": "RIGOROUSLY_CERTIFIED",
+      "gain": "12",
+      "instance": "instances/E3-f9a1146a044d497f0762.json",
+      "instance_id": "E3-f9a1146a044d497f0762",
+      "label": "UNSTABLE",
+      "open_rhp_count": 2,
+      "specification_hash": "f9a1146a044d497f0762bdf2db70db64790c3f537e35591c20719b8b9889314c"
+    }
+  ]
+}

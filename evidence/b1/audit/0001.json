@@ -1,0 +1,38 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "diffusion": "PASS",
+    "linearisation": "PASS",
+    "period": "PASS",
+    "phase": "PASS",
+    "phase_mode": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "EXACT_LINEAR_SPECTRUM",
+  "instance_id": "B1-25673d590e86fad70dbe",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "B1.eckhaus",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": "Eckhaus dispersion relation",
+    "known_reduction": "periodic rotation reduces the operator to Fourier blocks",
+    "review_required": false
+  },
+  "reason": "The exact dispersion relation excludes positive Bloch spectrum.",
+  "references": [
+    "https://doi.org/10.1137/18M1174751"
+  ],
+  "sampling_group": "B1.eckhaus",
+  "solver_dispatched": true,
+  "specification_hash": "25673d590e86fad70dbec54907e8cd96ef6008fd9c5b85cd389b0186f7f59984",
+  "status": "EVALUATED"
+}

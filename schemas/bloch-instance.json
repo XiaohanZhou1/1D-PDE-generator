@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B1 periodic Bloch calibration instance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "seed", "instance_id", "specification_hash", "family_id",
+    "structure_id", "template_version", "parameters", "equations", "target_wave", "eigenproblem",
+    "stability_question", "neutral_mode_policy", "calibration", "validity_checks",
+    "novelty_assessment", "references"],
+  "properties": {
+    "schema_version": {"const": "bloch-0.1"},
+    "seed": {"type": "integer"},
+    "instance_id": {"type": "string", "pattern": "^B1-[a-f0-9]{20}$"},
+    "specification_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "family_id": {"const": "B1"},
+    "structure_id": {"const": "B1.real-ginzburg-landau"},
+    "template_version": {"const": "1"},
+    "parameters": {"type": "object", "required": ["q_squared"], "additionalProperties": false,
+      "properties": {"q_squared": {"type": "string", "pattern": "^[0-9]+(/[1-9][0-9]*)?$"}}},
+    "equations": {"type": "object", "required": ["form", "variables", "diffusion"]},
+    "target_wave": {"type": "object", "required": ["form", "amplitude_squared", "phase", "speed", "period", "profile"]},
+    "eigenproblem": {"type": "object", "required": ["form", "potential", "function_space",
+      "operator_domain", "bloch_domain", "bloch_wavenumber", "gauge", "sideband_shift", "bands"]},
+    "stability_question": {"type": "string"},
+    "neutral_mode_policy": {"type": "string"},
+    "calibration": {"const": true},
+    "validity_checks": {"type": "object", "required": ["profile", "period", "phase", "diffusion",
+      "linearisation", "phase_mode", "solver_dispatch", "proof_difficulty"],
+      "additionalProperties": {"enum": ["PASS", "FAIL", "UNVERIFIED", "NOT_APPLICABLE"]}},
+    "novelty_assessment": {"type": "object", "required": ["status", "grouping", "training_admission"]},
+    "references": {"type": "array", "items": {"type": "string"}}
+  }
+}

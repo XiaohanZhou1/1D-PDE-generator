@@ -1,0 +1,295 @@
+{
+  "boundary_conditions": "specified limits at both infinities",
+  "branch_id": "A5.explicit.tanh-zero-0",
+  "diversity_level": "L1",
+  "equations": {
+    "A": [
+      {},
+      {}
+    ],
+    "D": [
+      {
+        "1": "1"
+      },
+      {
+        "1": "1"
+      }
+    ],
+    "F": [
+      {},
+      {}
+    ],
+    "G": [
+      {
+        "1": "-1",
+        "u*u": "45/16",
+        "u*u*u": "319/192",
+        "u*u*u*u": "145/384",
+        "u*v": "-29/16",
+        "v": "-29/8"
+      },
+      {
+        "u": "-1",
+        "u*u": "-5/8",
+        "u*u*u": "53/16",
+        "u*u*u*u": "1393/384",
+        "u*u*u*u*u": "725/512",
+        "u*u*u*u*u*u": "725/3072",
+        "u*u*u*v": "-145/128",
+        "u*u*v": "-261/64",
+        "u*v": "-37/8"
+      }
+    ],
+    "form": "D*X_xx-A*X_x+F+dx(G)"
+  },
+  "expected_proof_mechanisms": [
+    "conservative origin matching",
+    "finite-frequency exclusion"
+  ],
+  "family_id": "A5",
+  "far_field_data": {
+    "coefficients": {
+      "left": {
+        "B": [
+          [
+            {
+              "1": "-343/128"
+            },
+            {
+              "1": "-29/16"
+            }
+          ],
+          [
+            {
+              "1": "1413/1024"
+            },
+            {
+              "1": "215/128"
+            }
+          ]
+        ],
+        "C": [
+          [
+            {},
+            {}
+          ],
+          [
+            {},
+            {}
+          ]
+        ]
+      },
+      "right": {
+        "B": [
+          [
+            {
+              "1": "1387/128"
+            },
+            {
+              "1": "-87/16"
+            }
+          ],
+          [
+            {
+              "1": "19695/1024"
+            },
+            {
+              "1": "-1259/128"
+            }
+          ]
+        ],
+        "C": [
+          [
+            {},
+            {}
+          ],
+          [
+            {},
+            {}
+          ]
+        ]
+      }
+    },
+    "essential": "parabolas for b=-2,-1,1,2 and index region -Im^2<Re<-Im^2/4",
+    "rhp_splitting": [
+      2,
+      2
+    ],
+    "symbol": "-k^2*diag(D)+i*k*B+C"
+  },
+  "function_space": "L2(R)^2",
+  "generator_version": "0.1.0",
+  "instance_id": "A5-4537fbed294780878362",
+  "linearised_operator": {
+    "B": [
+      [
+        {
+          "1": "261/64",
+          "s*s": "-261/64",
+          "s*s*t": "-145/128",
+          "t": "865/128"
+        },
+        {
+          "1": "-29/8",
+          "t": "-29/16"
+        }
+      ],
+      [
+        {
+          "1": "5277/512",
+          "s*s": "-3837/256",
+          "s*s*s*s": "1885/512",
+          "s*s*s*s*t": "725/1024",
+          "s*s*t": "-5573/512",
+          "t": "9141/1024"
+        },
+        {
+          "1": "-261/64",
+          "s*s": "261/64",
+          "s*s*t": "145/128",
+          "t": "-737/128"
+        }
+      ]
+    ],
+    "C": [
+      [
+        {
+          "s*s": "1155/128",
+          "s*s*s*s": "-435/128",
+          "s*s*t": "261/32"
+        },
+        {
+          "s*s": "-29/16"
+        }
+      ],
+      [
+        {
+          "s*s": "31433/1024",
+          "s*s*s*s": "-18169/512",
+          "s*s*s*s*s*s": "3625/1024",
+          "s*s*s*s*t": "-1885/128",
+          "s*s*t": "3837/128"
+        },
+        {
+          "s*s": "-1027/128",
+          "s*s*s*s": "435/128",
+          "s*s*t": "-261/32"
+        }
+      ]
+    ],
+    "D": [
+      {
+        "1": "1"
+      },
+      {
+        "1": "1"
+      }
+    ],
+    "form": "D*p''+B*p'+C*p"
+  },
+  "neutral_mode_policy": "Permit essential edge at 0 and simple continued translation only.",
+  "novelty_assessment": {
+    "grouping": "A5.explicit-family",
+    "screen": "A5 parameter variant; finite-frequency exclusion requires review",
+    "status": "UNCERTAIN",
+    "training_admission": "HOLD"
+  },
+  "operator_domain": "H2(R)^2",
+  "parameters": {
+    "mu": "29/8",
+    "rho": "0"
+  },
+  "references": [
+    "5_1D_problems_v1.txt#A5",
+    "independent_audit_1.txt#A5",
+    "docs/mathematics.md",
+    "docs/interface.md"
+  ],
+  "required_solver_capabilities": [
+    "A5.design-v1",
+    "conservative.flux",
+    "integrated.crosscheck",
+    "whole_line.unweighted",
+    "continued.origin"
+  ],
+  "schema_version": "0.1-draft",
+  "seed": 20261124,
+  "spatial_domain": "real_line",
+  "specification_hash": "4537fbed2947808783626a1d6e85569366fe959d5ababb05921dac145ea3ccf8",
+  "stability_convention": "unweighted_shock_edge",
+  "stability_question": "Is this shock spectrally stable modulo translation at mu=29/8?",
+  "structure_id": "A5.design-v1",
+  "target_wave": {
+    "basis": "s=sech(z),t=tanh(z),z=x-c*time",
+    "dz": [
+      {
+        "s*s": "1"
+      },
+      {
+        "s*s": "5/8",
+        "s*s*s*s": "-5/8",
+        "s*s*t": "1"
+      }
+    ],
+    "dzz": [
+      {
+        "s*s*t": "-2"
+      },
+      {
+        "s*s": "-2",
+        "s*s*s*s": "3",
+        "s*s*s*s*t": "5/2",
+        "s*s*t": "-5/4"
+      }
+    ],
+    "endstates": [
+      [
+        {
+          "1": "-1"
+        },
+        {
+          "1": "7/24"
+        }
+      ],
+      [
+        {
+          "1": "1"
+        },
+        {
+          "1": "17/24"
+        }
+      ]
+    ],
+    "existence": "EXACT_SUBSTITUTION",
+    "phase": "u(0)=0, u'(0)>0",
+    "profile": [
+      {
+        "t": "1"
+      },
+      {
+        "t*t": "1/2",
+        "t*t*t": "5/24"
+      }
+    ],
+    "speed": 0
+  },
+  "task_type": "binary_stability",
+  "template_version": "1",
+  "validity_checks": {
+    "diffusion": "PASS",
+    "endstates": "PASS",
+    "global_nonlinear_existence": "UNVERIFIED",
+    "linearisation": "PASS",
+    "phase": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "UNVERIFIED",
+    "solver_dispatch": "PASS",
+    "translation": "PASS"
+  },
+  "variables": [
+    "u",
+    "v"
+  ],
+  "wave_id": "tanh-zero-0",
+  "weights": "identity"
+}

@@ -1,0 +1,31 @@
+{
+  "audit_version": "1",
+  "candidate_index": 2,
+  "checks": {
+    "contract": "PASS",
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "E1-23aaa05962b04abecbfb",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "E1.linear-stefan",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "reviewed exact calibration",
+    "review_required": false
+  },
+  "reason": "The admissible spatial root 2 gives one simple eigenvalue lambda=3.",
+  "references": [],
+  "sampling_group": "E1.linear-stefan",
+  "solver_dispatched": true,
+  "specification_hash": "23aaa05962b04abecbfb18771ecc1b4bf8dbe92e3224e0e8a06743bf608edf9c",
+  "status": "EVALUATED"
+}

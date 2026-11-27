@@ -1,0 +1,31 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "D1-862ca50387fb2bfc41dd",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "D1.uniform-delay-kink",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "reviewed exact calibration",
+    "review_required": false
+  },
+  "reason": "The delay perturbation of the resolvent has norm at most 1/2 in the closed right half-plane.",
+  "references": [],
+  "sampling_group": "D1.uniform-delay-kink",
+  "solver_dispatched": true,
+  "specification_hash": "862ca50387fb2bfc41dda316ac8465cc2d7315a7646bbdc8bd5b861dc55a33fd",
+  "status": "EVALUATED"
+}

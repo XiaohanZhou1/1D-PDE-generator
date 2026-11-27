@@ -1,0 +1,43 @@
+{
+  "audit_version": "1",
+  "candidate_index": 4,
+  "checks": {
+    "contract": "PASS",
+    "diffusion": "PASS",
+    "endstates": "PASS",
+    "global_nonlinear_existence": "UNVERIFIED",
+    "linearisation": "PASS",
+    "phase": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "UNVERIFIED",
+    "solver_dispatch": "FAIL",
+    "translation": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": null,
+  "instance_id": "A1-08cb57a942e347825a1a",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "A1.explicit-family",
+    "screen": "new feedback requires reduction review",
+    "status": "UNCERTAIN",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "UNVERIFIED",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": null,
+    "review_required": true
+  },
+  "reason": "The specification is outside the enabled solver capability.",
+  "references": [
+    "5_1D_problems_v1.txt#A1",
+    "independent_audit_1.txt#A1",
+    "docs/mathematics.md",
+    "docs/interface.md"
+  ],
+  "sampling_group": "A1.explicit-family",
+  "solver_dispatched": false,
+  "specification_hash": "08cb57a942e347825a1a25873af7719067d665baa55068e1ed030f50f74e19b3",
+  "status": "HOLD"
+}

@@ -39,7 +39,9 @@ Notes.
 - (c) **Travelling waves only.** For type 10 the solver lists the waves with frequency zero. Rotating waves `exp(i w t) U(x - c t)` with `w != 0` (for example the solitons of the nonlinear Schrodinger equation) are not travelling waves and are not listed. Write a complex field as two real components.
 - (d) **Multi-pulses.** For a stable pulse with an oscillatory tail the solver also lists the double pulses at the three smallest distances.
 
-Not covered: degenerate diffusion (porous-medium type); taxis combined with a free boundary; periodic wave trains; waves whose end states are not constant; equations that contain `x` or `t` explicitly; more than one space dimension; delays that depend on the state.
+The travelling-wave backend does not cover degenerate diffusion (porous-medium type); taxis combined with a free boundary; periodic wave trains; waves whose end states are not constant; equations that contain `x` or `t` explicitly; more than one space dimension; delays that depend on the state.
+
+The generator repository adds a separate `twstab floquet` command for applying the one-period map of its sampled F2 calibration orbit. [Temporal Floquet input and output](../docs/twstab-floquet.md)
 
 ---
 

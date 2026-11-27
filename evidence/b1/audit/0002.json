@@ -1,0 +1,38 @@
+{
+  "audit_version": "1",
+  "candidate_index": 2,
+  "checks": {
+    "contract": "PASS",
+    "diffusion": "PASS",
+    "linearisation": "PASS",
+    "period": "PASS",
+    "phase": "PASS",
+    "phase_mode": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "EXACT_LINEAR_SPECTRUM",
+  "instance_id": "B1-bf07853c4c357df29daa",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "B1.eckhaus",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": "Eckhaus dispersion relation",
+    "known_reduction": "periodic rotation reduces the operator to Fourier blocks",
+    "review_required": false
+  },
+  "reason": "The upper Bloch band has a positive sideband.",
+  "references": [
+    "https://doi.org/10.1137/18M1174751"
+  ],
+  "sampling_group": "B1.eckhaus",
+  "solver_dispatched": true,
+  "specification_hash": "bf07853c4c357df29daaa26350432fe46af98bf3f90b46244a43b8b27c515f8b",
+  "status": "EVALUATED"
+}

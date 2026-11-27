@@ -1,0 +1,31 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "E1-abfe7db54a9fcf147575",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "E1.linear-stefan",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "reviewed exact calibration",
+    "review_required": false
+  },
+  "reason": "The only candidate spatial root is -1/2 and fails left-decay admissibility.",
+  "references": [],
+  "sampling_group": "E1.linear-stefan",
+  "solver_dispatched": true,
+  "specification_hash": "abfe7db54a9fcf147575457fc2db96a1c27d6a9824fa52dc7e172b5427b416e8",
+  "status": "EVALUATED"
+}

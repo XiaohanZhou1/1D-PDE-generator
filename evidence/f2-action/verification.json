@@ -1,0 +1,68 @@
+{
+  "action_checks": [
+    {
+      "error_per_input_norm": 9.323984548495485e-16,
+      "probe": "low_mode",
+      "refinement_difference_per_input_norm": 2.1503882187733308e-12,
+      "xi": 0.0
+    },
+    {
+      "error_per_input_norm": 8.150268598473746e-17,
+      "probe": "mixed_modes",
+      "refinement_difference_per_input_norm": 1.4253040110361931e-13,
+      "xi": 0.0
+    },
+    {
+      "error_per_input_norm": 1.2401363714033247e-15,
+      "probe": "time_phase",
+      "refinement_difference_per_input_norm": 6.608958356017503e-13,
+      "xi": 0.0
+    },
+    {
+      "error_per_input_norm": 1.0390100580149066e-15,
+      "probe": "low_mode",
+      "refinement_difference_per_input_norm": 1.545344941014751e-12,
+      "xi": -0.25
+    },
+    {
+      "error_per_input_norm": 3.2893108927335833e-16,
+      "probe": "mixed_modes",
+      "refinement_difference_per_input_norm": 1.2574464645178934e-13,
+      "xi": -0.25
+    },
+    {
+      "error_per_input_norm": 9.271826384292408e-16,
+      "probe": "low_mode",
+      "refinement_difference_per_input_norm": 1.5458521065272823e-12,
+      "xi": 0.25
+    },
+    {
+      "error_per_input_norm": 1.515064602510195e-16,
+      "probe": "mixed_modes",
+      "refinement_difference_per_input_norm": 1.6115939902769225e-13,
+      "xi": 0.25
+    },
+    {
+      "error_per_input_norm": 7.251965782805363e-16,
+      "probe": "low_mode",
+      "refinement_difference_per_input_norm": 1.5248616899368238e-12,
+      "xi": 0.5
+    },
+    {
+      "error_per_input_norm": 2.738071984321507e-16,
+      "probe": "mixed_modes",
+      "refinement_difference_per_input_norm": 1.4093589621262556e-13,
+      "xi": 0.5
+    }
+  ],
+  "cutoff": 6,
+  "input_sha256": "5dff2d02f2dc789482e4383d1e19db5d9e7dc0183ca66c3b4ce5bf05908afb59",
+  "orbit_checks": {
+    "closure_error_max": 3.1086244689504383e-15,
+    "phase_error_max": 0.0,
+    "sampled_pde_residual_max": 8.442780197182032e-09
+  },
+  "phase_action_error": 1.931810496072329e-15,
+  "specification_hash": "29331e74ab259059d7844a2ce9c08f3a08dda7a08ce1ba0ef019f8c68f110b0e",
+  "status": "PASS"
+}

@@ -1,0 +1,31 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "F1-a9d37d3a65a006f745f5",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "F1.rotating-reaction-diffusion",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "reviewed exact calibration",
+    "review_required": false
+  },
+  "reason": "The Hermitian part yields a monodromy norm bound exp(-2*pi*k^2) for every real k.",
+  "references": [],
+  "sampling_group": "F1.rotating-reaction-diffusion",
+  "solver_dispatched": true,
+  "specification_hash": "a9d37d3a65a006f745f5ef35a2714190ecdf5bbb705240aaac81ca8decab0d7c",
+  "status": "EVALUATED"
+}

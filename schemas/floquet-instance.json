@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F2 space-dependent temporal Floquet instance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "seed", "instance_id", "specification_hash", "family_id",
+    "structure_id", "template_version", "parameters", "equations", "target_wave", "eigenproblem",
+    "stability_question", "calibration", "validity_checks", "novelty_assessment", "references"],
+  "properties": {
+    "schema_version": {"const": "floquet-0.1"},
+    "seed": {"type": "integer"},
+    "instance_id": {"type": "string", "pattern": "^F2-[a-f0-9]{20}$"},
+    "specification_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "family_id": {"const": "F2"},
+    "structure_id": {"const": "F2.heterogeneous-rotating-reaction-diffusion"},
+    "template_version": {"const": "1"},
+    "parameters": {"type": "object", "required": ["amplitude_offset", "amplitude_cosine", "diffusivities"]},
+    "equations": {"type": "object", "required": ["variables", "form", "amplitude", "J"]},
+    "target_wave": {"type": "object", "required": ["profile", "spatial_period", "temporal_period", "phase", "existence"]},
+    "eigenproblem": {"type": "object", "required": ["form", "space", "cell", "periodic_fiber_space",
+      "generator_domain", "bloch_zone", "convention", "fiber", "time_direction",
+      "stability_region", "neutral_mode_policy"]},
+    "stability_question": {"type": "string"},
+    "calibration": {"const": true},
+    "validity_checks": {"type": "object", "required": ["profile", "linearisation", "solver_dispatch", "proof_difficulty"]},
+    "novelty_assessment": {"type": "object", "required": ["status", "grouping", "training_admission"]},
+    "references": {"type": "array", "items": {"type": "string"}}
+  }
+}

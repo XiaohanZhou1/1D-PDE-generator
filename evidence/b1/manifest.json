@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "audit": "audit/0001.json",
+      "instance": "instances/B1-25673d590e86fad70dbe.json",
+      "label": "STABLE",
+      "open_rhp_count": null,
+      "result": "results/B1-25673d590e86fad70dbe.json"
+    },
+    {
+      "audit": "audit/0002.json",
+      "instance": "instances/B1-bf07853c4c357df29daa.json",
+      "label": "UNSTABLE",
+      "open_rhp_count": null,
+      "result": "results/B1-bf07853c4c357df29daa.json"
+    },
+    {
+      "audit": "audit/0003.json",
+      "instance": "instances/B1-a8762fe70249cee62407.json",
+      "label": "MARGINAL",
+      "open_rhp_count": null,
+      "result": "results/B1-a8762fe70249cee62407.json"
+    }
+  ],
+  "seed": 20261124
+}

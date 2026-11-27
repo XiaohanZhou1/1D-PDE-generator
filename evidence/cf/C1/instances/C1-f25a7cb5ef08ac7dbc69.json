@@ -1,0 +1,45 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "domain": "H3(R;C)",
+    "form": "partial_z*(-partial_z^2+1-U^2)",
+    "space": "L2(R;C)"
+  },
+  "equations": [
+    "u_t+u^2*u_x+u_xxx=0"
+  ],
+  "family_id": "C1",
+  "instance_id": "C1-f25a7cb5ef08ac7dbc69",
+  "novelty_assessment": {
+    "grouping": "C1.modified-kdv",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "case": "soliton",
+    "p": 2,
+    "speed": "1"
+  },
+  "references": [
+    "https://doi.org/10.1098/rsta.1992.0055"
+  ],
+  "schema_version": "cf-calibration-0.1",
+  "seed": 20261124,
+  "specification_hash": "f25a7cb5ef08ac7dbc69e80930b472d14fc25ba7a1a305cbb613eba96bf92c56",
+  "stability_question": "Exclude Re(lambda)>0 in the recorded space, or exhibit unstable spectrum.",
+  "structure_id": "C1.modified-kdv",
+  "target_wave": {
+    "endstates": [
+      0,
+      0
+    ],
+    "frame": "z=x-t",
+    "profile": "sqrt(6)*sech(z)"
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}

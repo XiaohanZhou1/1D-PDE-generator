@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import runpy
+import sys
 from pathlib import Path
 
 from .batch import lines, solve
@@ -29,7 +30,12 @@ def _list_of(path):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog="twstab", description="Spectral-stability label of a travelling wave.")
+    if sys.argv[1:2] == ["floquet"]:
+        from .temporal_floquet import main as floquet_main
+        floquet_main(sys.argv[2:])
+        return
+    parser = argparse.ArgumentParser(prog="twstab", description="Spectral-stability label of a travelling wave.",
+                                     epilog="For sampled F2 orbits, use %(prog)s floquet --help.")
     parser.add_argument("files", nargs="+", type=Path, help="problem files written with SymPy")
     parser.add_argument("--out", type=Path, default=Path(__file__).resolve().parent.parent / "results",
                         help="directory for the JSON records")

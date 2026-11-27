@@ -1,0 +1,71 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "bloch_zone": "[-1/2,1/2]",
+    "cell": "[0,2*pi]",
+    "convention": "physical perturbation exp(i*xi*x)*p(x,t), p spatially periodic",
+    "fiber": "D*((partial_x+i*xi)^2-f_xx/f)+J-2*f^2*e(t)*e(t)^T",
+    "form": "temporal_monodromy_spatial_bloch",
+    "generator_domain": "H2_per([0,2*pi];C^2)",
+    "neutral_mode_policy": "Simple time-phase multiplier 1 in the xi=0 fiber.",
+    "periodic_fiber_space": "L2_per([0,2*pi];C^2)",
+    "space": "unweighted L2(R;C^2)",
+    "stability_region": "|multiplier|<=1",
+    "time_direction": "M_xi propagates data from t=0 to t=2*pi"
+  },
+  "equations": {
+    "J": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "amplitude": "f(x)=2+cos(x)",
+    "form": "X_t=D*(X_xx-(f_xx/f)*X)+J*X+(f^2-|X|^2)*X",
+    "variables": [
+      "u",
+      "v"
+    ]
+  },
+  "family_id": "F2",
+  "instance_id": "F2-29331e74ab259059d784",
+  "novelty_assessment": {
+    "grouping": "F2.heterogeneous-rotating-reaction-diffusion",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "amplitude_cosine": 1,
+    "amplitude_offset": 2,
+    "diffusivities": [
+      1,
+      2
+    ]
+  },
+  "references": [
+    "https://doi.org/10.1070/IM1983v021n01ABEH001642"
+  ],
+  "schema_version": "floquet-0.1",
+  "seed": 20261124,
+  "specification_hash": "29331e74ab259059d7844a2ce9c08f3a08dda7a08ce1ba0ef019f8c68f110b0e",
+  "stability_question": "Exclude spectrum outside the unit disk for the full-line temporal monodromy.",
+  "structure_id": "F2.heterogeneous-rotating-reaction-diffusion",
+  "target_wave": {
+    "existence": "exact manufactured solution in a spatially periodic medium",
+    "phase": "X(x,0)=(2+cos(x),0)",
+    "profile": "(2+cos(x))*(cos(t),sin(t))",
+    "spatial_period": "2*pi",
+    "temporal_period": "2*pi"
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "linearisation": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}

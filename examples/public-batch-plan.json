@@ -1,0 +1,10 @@
+[
+  {"family": "B3", "parameters": {"damping": 6, "skew": 2}},
+  {"family": "C2", "parameters": {"alpha": "1/4", "beta": "1/8"}},
+  {"family": "D2", "parameters": {"sigma": "1/2", "tau": 1, "epsilon": "3/4"}},
+  {"family": "E3", "parameters": {"gain": 5}},
+  {"family": "E3", "parameters": {"gain": 8}},
+  {"family": "F3", "parameters": {"gain": "1/4"}},
+  {"family": "F4", "parameters": {"stiffness": "15/16", "modulation": "1/3"}},
+  {"family": "F4", "parameters": {"stiffness": "15/16", "modulation": "2/3"}}
+]

@@ -1,0 +1,34 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "linearisation": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "F2-29331e74ab259059d784",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "F2.heterogeneous-rotating-reaction-diffusion",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": "full-zone contraction",
+    "known_reduction": "ground-state transform and energy estimate",
+    "review_required": false
+  },
+  "reason": "The continuum monodromy is a contraction for every spatial Bloch fiber.",
+  "references": [
+    "https://doi.org/10.1070/IM1983v021n01ABEH001642"
+  ],
+  "sampling_group": "F2.heterogeneous-rotating-reaction-diffusion",
+  "solver_dispatched": true,
+  "specification_hash": "29331e74ab259059d7844a2ce9c08f3a08dda7a08ce1ba0ef019f8c68f110b0e",
+  "status": "EVALUATED"
+}

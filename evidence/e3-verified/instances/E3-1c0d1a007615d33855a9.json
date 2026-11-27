@@ -1,0 +1,65 @@
+{
+  "boundary": {
+    "domain": "x<s(t)",
+    "evolution": [
+      "s'=3/2+a",
+      "a'=b",
+      "b'=-a-2*damping*b+gain*(u_x-1/2+v_x-1)"
+    ],
+    "state": [
+      "a",
+      "b"
+    ],
+    "values": [
+      1,
+      1
+    ]
+  },
+  "calibration": false,
+  "eigenproblem": {
+    "characteristic": "lambda^2+2*damping*lambda+1-gain*(p_lambda'(0)+q_lambda'(0))",
+    "domain": "H2 Dirichlet in both fields; free scalar states",
+    "question": "Is there spectrum in the open right half-plane?",
+    "space": "L2((-inf,0);C^2) x C^3"
+  },
+  "equations": [
+    "u_t=u_xx-u+v-u^2",
+    "v_t=v_xx-(5/2)*v"
+  ],
+  "family_id": "E3",
+  "instance_id": "E3-1c0d1a007615d33855a9",
+  "novelty_assessment": {
+    "grouping": "E3.dynamic-interface-oscillator",
+    "status": "UNCERTAIN",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "damping": "1/8",
+    "frequency": "1",
+    "gain": "5",
+    "speed": "3/2"
+  },
+  "references": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11301126/"
+  ],
+  "schema_version": "e3-dynamic-interface-0.1",
+  "seed": 20261126,
+  "specification_hash": "1c0d1a007615d33855a98485ba6a11214f5d9e36d482f79f6082c63fc01697be",
+  "structure_id": "E3.dynamic-interface-oscillator",
+  "target_wave": {
+    "boundary_state": [
+      0,
+      0
+    ],
+    "frame": "z=x-s(t)",
+    "interface": "s(t)=3*t/2",
+    "profile": "(exp(z/2),exp(z))"
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "linearisation": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "UNVERIFIED",
+    "solver_dispatch": "PASS"
+  }
+}

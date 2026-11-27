@@ -1,0 +1,137 @@
+{
+  "certificate": {
+    "coverage": "All real spatial frequencies and all |multiplier|>1 on full-line L2.",
+    "method": "Uniform contractivity of all temporal monodromy fibers",
+    "multiplier_norm_bound": "exp(-2*pi*k^2)",
+    "neutral": "time phase is a fiber multiplier at k=0",
+    "proof": "docs/cf-calibration.md#f1--temporal-floquet",
+    "zero_fiber_multipliers": [
+      "1",
+      "exp(-4*pi)"
+    ]
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "F1-a9d37d3a65a006f745f5",
+  "label": "STABLE",
+  "native_check": {
+    "reason": "The bundled solver has no temporal-monodromy interface.",
+    "status": "UNSUPPORTED"
+  },
+  "numerical_check": {
+    "samples": [
+      {
+        "bound": 1.0,
+        "k": 0.0,
+        "matrix": [
+          [
+            3.487342355926211e-06,
+            2.879779747999578e-13
+          ],
+          [
+            4.4965284343193455e-13,
+            0.9999999999988552
+          ]
+        ],
+        "multiplier_moduli": [
+          0.9999999999988552,
+          3.4873423558900996e-06
+        ],
+        "norm": 0.9999999999988554,
+        "refinement_difference": 1.2693349548621762e-10
+      },
+      {
+        "bound": 0.9391013674242926,
+        "k": 0.1,
+        "matrix": [
+          [
+            1.7402153815286456e-06,
+            0.0011421481178021664
+          ],
+          [
+            -0.0011421481171786153,
+            0.9100765430157854
+          ]
+        ],
+        "multiplier_moduli": [
+          0.9100751096123192,
+          3.1736188479403182e-06
+        ],
+        "norm": 0.9100779764092545,
+        "refinement_difference": 1.1003401786810365e-10
+      },
+      {
+        "bound": 0.20787957635076193,
+        "k": 0.5,
+        "matrix": [
+          [
+            -0.00011385115152322796,
+            0.003311737395150065
+          ],
+          [
+            -0.0033117373953702135,
+            0.0960576737046497
+          ]
+        ],
+        "multiplier_moduli": [
+          0.09594349602957308,
+          3.265235533900235e-07
+        ],
+        "norm": 0.09617185060441473,
+        "refinement_difference": 2.766633811018914e-11
+      },
+      {
+        "bound": 0.0018674427317079893,
+        "k": 1.0,
+        "matrix": [
+          [
+            -3.2624246937402433e-06,
+            1.8027038994394372e-05
+          ],
+          [
+            -1.8027038992833334e-05,
+            9.960426810472504e-05
+          ]
+        ],
+        "multiplier_moduli": [
+          9.634160767679847e-05,
+          2.35734186335222e-10
+        ],
+        "norm": 0.00010286691357898362,
+        "refinement_difference": 6.155270224150465e-13
+      },
+      {
+        "bound": 1.216155670940932e-11,
+        "k": 2.0,
+        "matrix": [
+          [
+            7.079725255704732e-15,
+            -4.675729357907685e-15
+          ],
+          [
+            1.5444733541682616e-14,
+            -1.0200306026466418e-14
+          ]
+        ],
+        "multiplier_moduli": [
+          3.1205712037902794e-15,
+          9.566971406250694e-21
+        ],
+        "norm": 2.0361016475898357e-14,
+        "refinement_difference": 7.23036521033758e-12
+      }
+    ],
+    "status": "PASS",
+    "zero_fiber_error": 1.2589868935021347e-12
+  },
+  "open_rhp_count": null,
+  "parameters": {
+    "case": "rotation",
+    "diffusivities": [
+      1,
+      2
+    ],
+    "period": "2*pi"
+  },
+  "reason": "The Hermitian part yields a monodromy norm bound exp(-2*pi*k^2) for every real k.",
+  "specification_hash": "a9d37d3a65a006f745f5ef35a2714190ecdf5bbb705240aaac81ca8decab0d7c"
+}
