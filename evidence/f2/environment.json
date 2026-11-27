@@ -1,0 +1,15 @@
+{
+  "backend": "F2 spatial Fourier\u2013Bloch discretisation and temporal monodromy",
+  "family": "F2",
+  "input_sha256": "15f29237e9d111b7069cae565e6c886be08d3b0b281d7b862421752acd854c44",
+  "numpy": "2.4.4",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "scipy": "1.18.1",
+  "seed": 20261124,
+  "solver_enabled": true,
+  "solver_source_sha256": {
+    "docs/f2.md": "8729abe43d44dec4cb3c2fead710e95b6589a7fbb89f540ec08b7f9983b04ccf",
+    "pdegen/floquet.py": "5d563fbb1ff0cb4f46cd7d18bc5265d60610e21960f2f2ace354432cd5fa0122",
+    "schemas/floquet-instance.json": "543234efb438d5901e6c6b766f1c60f9839ca14543e6651d84dd6c5f2cce5a41"
+  }
+}

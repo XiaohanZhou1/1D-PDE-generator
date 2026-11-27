@@ -1,0 +1,89 @@
+{
+  "analytical_label": "MARGINAL",
+  "coperiodic_label": "STABLE",
+  "evidence_grade": "EXACT_LINEAR_SPECTRUM",
+  "instability_cutoff_squared": "0",
+  "instance_id": "B1-a8762fe70249cee62407",
+  "label": "MARGINAL",
+  "numerical_fiber_checks": [
+    {
+      "exact_top_three": [
+        0.0,
+        -0.05719095841793663,
+        -0.05719095841793663
+      ],
+      "finite_difference_top_three": [
+        [
+          0.00026764415362581025,
+          -0.05656321800913735,
+          -0.05656321800913735
+        ],
+        [
+          6.692716282771152e-05,
+          -0.05703410009350225,
+          -0.05703410009350225
+        ],
+        [
+          1.6732798099763335e-05,
+          -0.05715174864235602,
+          -0.05715174864235602
+        ]
+      ],
+      "max_absolute_error": [
+        0.0006277404087992808,
+        0.00015685832443437797,
+        3.9209775580612005e-05
+      ],
+      "nodes": [
+        64,
+        128,
+        256
+      ],
+      "status": "PASS",
+      "xi": 0.0
+    },
+    {
+      "exact_top_three": [
+        -0.0009753347773971848,
+        -0.01358119804503942,
+        -0.14814814814814808
+      ],
+      "finite_difference_top_three": [
+        [
+          -0.0006513097691984967,
+          -0.013118625655744192,
+          -0.1473504083068204
+        ],
+        [
+          -0.0008943154899594541,
+          -0.013465564043991941,
+          -0.1479489306716078
+        ],
+        [
+          -0.0009550791414198814,
+          -0.013552290116930283,
+          -0.1480983573753994
+        ]
+      ],
+      "max_absolute_error": [
+        0.0007977398413276937,
+        0.000199217476540281,
+        4.979077274869237e-05
+      ],
+      "nodes": [
+        64,
+        128,
+        256
+      ],
+      "status": "PASS",
+      "xi": 0.19245008972987523
+    }
+  ],
+  "open_rhp_count": null,
+  "parameters": {
+    "q_squared": "1/3"
+  },
+  "phase_diffusion_coefficient": "0",
+  "reason": "The nonpositive phase band touches zero at fourth order.",
+  "specification_hash": "a8762fe70249cee62407a722b856f19c994c1207c536b9fc25dfcb21b77dfd92"
+}

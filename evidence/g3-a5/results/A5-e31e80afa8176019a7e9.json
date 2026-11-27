@@ -1,0 +1,261 @@
+{
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "instance_id": "A5-e31e80afa8176019a7e9",
+  "label": "STABLE",
+  "native": {
+    "classification": {
+      "details": {
+        "components": 2,
+        "constraints": 0,
+        "first_order_dimension": 4,
+        "orders": [
+          2,
+          2
+        ],
+        "space_order": 2,
+        "time_order": 1
+      },
+      "reasons": [
+        "local system, first order in time"
+      ],
+      "sub_solver": "L",
+      "supported": true
+    },
+    "closed_half_plane": {
+      "evaluations": 3540,
+      "label": "STABLE",
+      "open_rhp_count": 0,
+      "qualifier": "numerical stability modulo translation",
+      "reason": "one continued origin zero and no additional zeros inside the supplied enclosure",
+      "region": {
+        "source": "supplied high-frequency enclosure",
+        "x_max": 31.0,
+        "x_min": 0,
+        "y_max": 118.0
+      },
+      "windings": [
+        {
+          "L": 10.361632918473205,
+          "origin": {
+            "count": 1,
+            "evaluations": 192,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.03322266605456123,
+            "resolved": true
+          },
+          "outer": {
+            "count": 1,
+            "evaluations": 400,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.47595667666564623,
+            "resolved": true
+          },
+          "radius": 0.04,
+          "step": 0.08
+        },
+        {
+          "L": 10.361632918473205,
+          "origin": {
+            "count": 1,
+            "evaluations": 192,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.03393579012000289,
+            "resolved": true
+          },
+          "outer": {
+            "count": 1,
+            "evaluations": 396,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.47406883595506555,
+            "resolved": true
+          },
+          "radius": 0.08,
+          "step": 0.08
+        },
+        {
+          "L": 10.361632918473205,
+          "origin": {
+            "count": 1,
+            "evaluations": 192,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.03322267947553746,
+            "resolved": true
+          },
+          "outer": {
+            "count": 1,
+            "evaluations": 400,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.4759565991484601,
+            "resolved": true
+          },
+          "radius": 0.04,
+          "step": 0.04
+        },
+        {
+          "L": 10.361632918473205,
+          "origin": {
+            "count": 1,
+            "evaluations": 192,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.03393576208509331,
+            "resolved": true
+          },
+          "outer": {
+            "count": 1,
+            "evaluations": 396,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.4740685947276688,
+            "resolved": true
+          },
+          "radius": 0.08,
+          "step": 0.04
+        },
+        {
+          "L": 7.771224688854904,
+          "origin": {
+            "count": 1,
+            "evaluations": 192,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.033222680049675546,
+            "resolved": true
+          },
+          "outer": {
+            "count": 1,
+            "evaluations": 400,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.47595659850751537,
+            "resolved": true
+          },
+          "radius": 0.04,
+          "step": 0.04
+        },
+        {
+          "L": 7.771224688854904,
+          "origin": {
+            "count": 1,
+            "evaluations": 192,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.03393576440542011,
+            "resolved": true
+          },
+          "outer": {
+            "count": 1,
+            "evaluations": 396,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.47406858872297897,
+            "resolved": true
+          },
+          "radius": 0.08,
+          "step": 0.04
+        }
+      ]
+    },
+    "conservation": {
+      "depth": 1,
+      "flux_constant": [
+        1.0000000000000002,
+        2.220446049250313e-16
+      ],
+      "jump_residual": 1.463055965895381e-16,
+      "method": "continued determinant around the origin",
+      "operator": "integrated",
+      "speed": 0.0,
+      "transport": {
+        "left": [
+          -2.0,
+          1.0
+        ],
+        "right": [
+          -1.0000000000000009,
+          2.0000000000000018
+        ]
+      }
+    },
+    "decided_in_pass": 2,
+    "essential": {
+      "s_ess": 0.0,
+      "sides": {
+        "left": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        },
+        "right": {
+          "growing_at_large_kappa": false,
+          "kappa": 0.0,
+          "limit_at_infinity": null,
+          "rounding": 0.0,
+          "s": 0.0
+        }
+      }
+    },
+    "evaluations": 3540,
+    "file": "A5-e31e80afa8176019a7e9",
+    "label": "STABLE",
+    "name": "A5-e31e80afa8176019a7e9",
+    "parameters": {
+      "rho": 0.0
+    },
+    "qualifier": "numerical stability modulo translation",
+    "reason": "conservative integrated operator: one continued origin zero and no additional zeros inside the supplied enclosure",
+    "roots": [],
+    "solver_version": "2.18.0",
+    "space": "unweighted L2(R; C^n)",
+    "timings": {
+      "continued_origin": 0.7778655000000185,
+      "essential_spectrum": 0.10102079999995794,
+      "symbolic": 0.07127109999998993,
+      "total": 1.1432775000000106,
+      "wave": 0.19306519999997818
+    },
+    "wave": {
+      "L": 10.361632918473205,
+      "computed": true,
+      "kind": "front",
+      "left": [
+        -1.0,
+        0.2916666666666667
+      ],
+      "nodes": 2718,
+      "profile_error": 2.8815050345798454e-10,
+      "right": [
+        1.0,
+        0.7083333333333334
+      ],
+      "speed": 0.0,
+      "started_from": "parameter_unfolding",
+      "tail_error": 2.6543118814004174e-09,
+      "target_equation_residual": 1.2823462292033128e-09,
+      "target_pde_residual": 2.7229749884338794e-06,
+      "unfolding": {
+        "fit_tolerance": 1e-07,
+        "fitted": 7.851187688212459e-14,
+        "guess": 0.02,
+        "normal_variation_max": 0.9999887041593699,
+        "parameter": "rho",
+        "target": 0.0
+      }
+    }
+  },
+  "open_rhp_count": 0,
+  "parameters": {
+    "mu": "1",
+    "rho": "0"
+  },
+  "reason": "conservative integrated operator: one continued origin zero and no additional zeros inside the supplied enclosure",
+  "specification_hash": "e31e80afa8176019a7e99cf2c18ba5c836de8a7b4d498366d030ae5071c90600"
+}

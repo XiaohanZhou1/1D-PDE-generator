@@ -1,0 +1,37 @@
+{
+  "audit_version": "1",
+  "candidate_index": 2,
+  "checks": {
+    "contract": "PASS",
+    "linearisation": "PASS",
+    "period": "UNVERIFIED",
+    "phase": "UNVERIFIED",
+    "phase_mode": "UNVERIFIED",
+    "profile": "UNVERIFIED",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "instance_id": "B2-53156da7a3bb9225fdba",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "B2.swift-hohenberg",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "classical Swift\u2013Hohenberg roll and selfadjoint Bloch fibers",
+    "review_required": false
+  },
+  "reason": "A positive Bloch eigenvalue converged in Fourier and physical discretisations.",
+  "references": [
+    "https://doi.org/10.1007/s002200050230"
+  ],
+  "sampling_group": "B2.swift-hohenberg",
+  "solver_dispatched": true,
+  "specification_hash": "53156da7a3bb9225fdba5435c6f3346489eb669976465553da7cb1c9a5530dfc",
+  "status": "EVALUATED"
+}

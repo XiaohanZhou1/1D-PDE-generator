@@ -1,0 +1,45 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "displacement": "s_pert'=kappa*p_z(0)",
+    "domain": "H2((-inf,0);C) with p(0)=0",
+    "form": "p_zz+c*p_z-p+kappa*U_z*p_z(0)",
+    "space": "L2((-inf,0);C) on the boundary-attached domain"
+  },
+  "equations": [
+    "u_t=u_xx-u for x<s(t)",
+    "u(s(t),t)=1",
+    "s'(t)=kappa*(u_x(s(t),t)-1)"
+  ],
+  "family_id": "E1",
+  "instance_id": "E1-abfe7db54a9fcf147575",
+  "novelty_assessment": {
+    "grouping": "E1.linear-stefan",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "case": "advancing",
+    "decay": "1/2",
+    "kappa": "-3",
+    "speed": "3/2"
+  },
+  "references": [],
+  "schema_version": "cf-calibration-0.1",
+  "seed": 20261124,
+  "specification_hash": "abfe7db54a9fcf147575457fc2db96a1c27d6a9824fa52dc7e172b5427b416e8",
+  "stability_question": "Exclude Re(lambda)>0 in the recorded space, or exhibit unstable spectrum.",
+  "structure_id": "E1.linear-stefan",
+  "target_wave": {
+    "far_field": 0,
+    "frame": "z=x-s(t)",
+    "interface": "s(t)=c*t",
+    "profile": "exp(m*z)"
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}

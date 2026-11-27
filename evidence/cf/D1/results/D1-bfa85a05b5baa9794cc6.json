@@ -1,0 +1,331 @@
+{
+  "certificate": {
+    "coverage": "At least one positive real eigenvalue; total unstable count unproved.",
+    "method": "Selfadjoint test function and continuity on the real characteristic axis",
+    "neutral": "kink translation",
+    "positive_root_interval": [
+      0,
+      5
+    ],
+    "proof": "docs/cf-calibration.md#d1--uniform-distributed-delay"
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "D1-bfa85a05b5baa9794cc6",
+  "label": "UNSTABLE",
+  "native_check": {
+    "record": {
+      "classification": {
+        "details": {
+          "components": 2,
+          "delay": 1.98940093499165,
+          "delayed_components": [
+            1
+          ],
+          "delays": 16,
+          "distributed_delays": [
+            {
+              "decay": null,
+              "frequency": 12.0,
+              "lower": 0.0,
+              "mass": 1.0,
+              "mean_delay": 1.0,
+              "nodes": 16,
+              "upper": 2.0
+            }
+          ],
+          "space_order": 2,
+          "time_order": 1
+        },
+        "reasons": [
+          "local terms and time delays (discrete or distributed)"
+        ],
+        "sub_solver": "D",
+        "supported": true
+      },
+      "decided_in_pass": 1,
+      "essential": {
+        "s_ess": -1.0,
+        "sides": {
+          "left": {
+            "chebyshev_points": 20,
+            "corrected_by_newton": false,
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "s": -1.0
+          },
+          "right": {
+            "chebyshev_points": 20,
+            "corrected_by_newton": false,
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "s": -1.0
+          }
+        }
+      },
+      "evaluations": 1096,
+      "file": "solver/problems/delay_kink_uniform.py",
+      "label": "UNSTABLE",
+      "name": "delay_kink_uniform",
+      "parameters": {
+        "sigma": 6.0,
+        "tau": 2.0
+      },
+      "pass_1": {
+        "W": 4,
+        "box": {
+          "coarse": {
+            "count": 4,
+            "evaluations": 288,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.5430286153120035,
+            "resolved": true
+          },
+          "fine": {
+            "count": 4,
+            "evaluations": 296,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.5470085509919328,
+            "resolved": true
+          }
+        },
+        "cells_fine": 292,
+        "complete_count": true,
+        "counts_consistent": true,
+        "h_coarse": 0.28284271247461734,
+        "h_fine": 0.14142135623730867,
+        "m0": 1,
+        "open_rhp_count": 2,
+        "origin_disk": {
+          "coarse": {
+            "count": 1,
+            "evaluations": 64,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.20343543427687136,
+            "resolved": true
+          },
+          "fine": {
+            "count": 1,
+            "evaluations": 64,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.19910482481876984,
+            "resolved": true
+          }
+        },
+        "outcome": "UNSTABLE",
+        "parity": {
+          "odd": false,
+          "signs": {
+            "coarse": [
+              1,
+              1
+            ],
+            "fine": [
+              1,
+              1
+            ]
+          }
+        },
+        "reason": "a root with positive real part is confirmed",
+        "refinement_level": 0,
+        "roots": [
+          {
+            "coarse": [
+              0.8718719278575362,
+              6.1897844422816474e-30
+            ],
+            "error": 3.505162229161159e-05,
+            "multiplicity_in_count": 1,
+            "radius": 0.125,
+            "seed": [
+              0.8721537891472906,
+              0.0
+            ],
+            "status": "unstable",
+            "value": [
+              0.8718369412260333,
+              0.0
+            ],
+            "winding_coarse": 1,
+            "winding_fine": 1
+          },
+          {
+            "coarse": [
+              0.26624788184262677,
+              -1.7060095690203064e-27
+            ],
+            "error": 0.00019883419411497922,
+            "multiplicity_in_count": 1,
+            "radius": 0.06651227815982512,
+            "seed": [
+              0.26732854293657304,
+              0.0
+            ],
+            "status": "unstable",
+            "value": [
+              0.2660491126393005,
+              0.0
+            ],
+            "winding_coarse": 1,
+            "winding_fine": 1
+          },
+          {
+            "coarse": [
+              -0.16024077004931697,
+              1.7276876167310886e-28
+            ],
+            "error": 0.0006054079375938622,
+            "multiplicity_in_count": 1,
+            "radius": 0.040211528249030536,
+            "seed": [
+              -0.15814951745213435,
+              0.0
+            ],
+            "status": "stable",
+            "value": [
+              -0.16084611299612214,
+              0.0
+            ],
+            "winding_coarse": 1,
+            "winding_fine": 1
+          }
+        ],
+        "subdivision": null,
+        "translation_root": [
+          7.0509615154521514e-06,
+          -2.700189824794187e-26
+        ]
+      },
+      "reason": "a root with positive real part is confirmed",
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 1.7115272368155367e-14,
+          "bK": 0.0,
+          "bounded_term": 7.784655248401538,
+          "c0": 8.784655248401538,
+          "c2": 7.784655248401538,
+          "d": 1.0,
+          "d1": 0.0,
+          "lam0": 2.0,
+          "reason": null,
+          "s1": 1.0097419586828951e-28
+        },
+        "origin_radius": 0.125,
+        "source": "energy estimate",
+        "x_max": 9.663120773241692,
+        "x_min": -0.25,
+        "y_max": 8.56312077324175
+      },
+      "roots": [
+        {
+          "coarse": [
+            0.8718719278575362,
+            6.1897844422816474e-30
+          ],
+          "error": 3.505162229161159e-05,
+          "multiplicity_in_count": 1,
+          "radius": 0.125,
+          "seed": [
+            0.8721537891472906,
+            0.0
+          ],
+          "status": "unstable",
+          "value": [
+            0.8718369412260333,
+            0.0
+          ],
+          "winding_coarse": 1,
+          "winding_fine": 1
+        },
+        {
+          "coarse": [
+            0.26624788184262677,
+            -1.7060095690203064e-27
+          ],
+          "error": 0.00019883419411497922,
+          "multiplicity_in_count": 1,
+          "radius": 0.06651227815982512,
+          "seed": [
+            0.26732854293657304,
+            0.0
+          ],
+          "status": "unstable",
+          "value": [
+            0.2660491126393005,
+            0.0
+          ],
+          "winding_coarse": 1,
+          "winding_fine": 1
+        },
+        {
+          "coarse": [
+            -0.16024077004931697,
+            1.7276876167310886e-28
+          ],
+          "error": 0.0006054079375938622,
+          "multiplicity_in_count": 1,
+          "radius": 0.040211528249030536,
+          "seed": [
+            -0.15814951745213435,
+            0.0
+          ],
+          "status": "stable",
+          "value": [
+            -0.16084611299612214,
+            0.0
+          ],
+          "winding_coarse": 1,
+          "winding_fine": 1
+        }
+      ],
+      "solver_version": "2.18.0",
+      "space": "unweighted L2(R; C^n)",
+      "timings": {
+        "essential_spectrum": 0.004055800000060117,
+        "pass_1": 0.989237900000262,
+        "symbolic": 0.026972099999966304,
+        "total": 1.2330928000001222,
+        "wave": 0.20786850000013146
+      },
+      "wave": {
+        "L": 20.72326583694641,
+        "computed": true,
+        "continuation_steps": 4,
+        "delay": 1.98940093499165,
+        "delays": 16,
+        "grid_step": 0.028284271247461898,
+        "kind": "front",
+        "left": [
+          -1.0,
+          0.0
+        ],
+        "nodes": 1464,
+        "profile_error": 8.123848586431374e-09,
+        "right": [
+          1.0,
+          0.0
+        ],
+        "speed": 1.7115272368155367e-14,
+        "speed_error": 1.021005331714932e-15,
+        "speed_is_unknown": true,
+        "speed_without_delay": 5.947754159843239e-18,
+        "started_from": "continuation in the delay",
+        "tail_error": 1.1489698081845745e-12
+      }
+    },
+    "status": "RUN"
+  },
+  "open_rhp_count": null,
+  "parameters": {
+    "case": "positive_root",
+    "sigma": "6",
+    "tau": "2"
+  },
+  "reason": "The top of the characteristic operator crosses zero on (0,5) above its essential spectrum.",
+  "specification_hash": "bfa85a05b5baa9794cc6c3fc4c14445f42b274e67ab0789efb1420706be2e34c"
+}

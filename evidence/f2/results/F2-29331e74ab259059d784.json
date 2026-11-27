@@ -1,0 +1,308 @@
+{
+  "certificate": {
+    "coverage": "every spatial Bloch fiber and all spatial modes",
+    "fiber_norm_bound": "exp(-2*pi*xi^2/9)",
+    "method": "Bloch ground-state transform and time-dependent energy estimate",
+    "phase_mode": "f(x)*(-sin(t),cos(t)) at xi=0",
+    "proof": "docs/f2.md#continuum-proof"
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "F2-29331e74ab259059d784",
+  "label": "STABLE",
+  "numerical_check": {
+    "fibers": [
+      {
+        "analytic_norm_bound": 0.839849201571523,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.5030665861017176,
+            "spectral_radius": 0.5030661006121349,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.5030669325810999,
+            "spectral_radius": 0.5030664470656097,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.5030669326179451,
+            "spectral_radius": 0.5030664471024546,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.5030669326179434,
+            "spectral_radius": 0.5030664471024529,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.5030664471024529,
+        "phase_residual": null,
+        "second_multiplier_modulus": 0.0028191825865167518,
+        "spatial_refinement_difference": 3.684497151823507e-11,
+        "time_refinement_difference": 1.7763568394002505e-15,
+        "xi": -0.5
+      },
+      {
+        "analytic_norm_bound": 0.9573050026043727,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.7382707482272717,
+            "spectral_radius": 0.7382703152962835,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.7382708454182296,
+            "spectral_radius": 0.7382704124872337,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.7382708454293955,
+            "spectral_radius": 0.7382704124983993,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.7382708454293958,
+            "spectral_radius": 0.7382704124984,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.7382704124984,
+        "phase_residual": null,
+        "second_multiplier_modulus": 0.0006786021184866328,
+        "spatial_refinement_difference": 1.1165623980957662e-11,
+        "time_refinement_difference": 6.661338147750939e-16,
+        "xi": -0.25
+      },
+      {
+        "analytic_norm_bound": 0.9891509720214378,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.9204702031467746,
+            "spectral_radius": 0.9204701517189179,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.9204702287083252,
+            "spectral_radius": 0.9204701772803089,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9204702287113938,
+            "spectral_radius": 0.9204701772833774,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9204702287113955,
+            "spectral_radius": 0.9204701772833781,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.9204701772833781,
+        "phase_residual": null,
+        "second_multiplier_modulus": 0.000163384153635537,
+        "spatial_refinement_difference": 3.06854541776147e-12,
+        "time_refinement_difference": 6.661338147750939e-16,
+        "xi": -0.125
+      },
+      {
+        "analytic_norm_bound": 1.0,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.9999999999996761,
+            "spectral_radius": 0.9999999999996771,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.9999999999999688,
+            "spectral_radius": 0.9999999999999697,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9999999999999977,
+            "spectral_radius": 0.9999999999999969,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9999999999999991,
+            "spectral_radius": 0.9999999999999994,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.9999999999999994,
+        "phase_residual": 4.065196747694479e-15,
+        "second_multiplier_modulus": 5.837167861334608e-05,
+        "spatial_refinement_difference": 2.7200464103316335e-14,
+        "time_refinement_difference": 2.55351295663786e-15,
+        "xi": 0.0
+      },
+      {
+        "analytic_norm_bound": 0.9993184631127809,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.9947084150477141,
+            "spectral_radius": 0.9947084148050861,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.9947084166760579,
+            "spectral_radius": 0.994708416433428,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9947084166762805,
+            "spectral_radius": 0.9947084164336506,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9947084166762854,
+            "spectral_radius": 0.9947084164336556,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.9947084164336556,
+        "phase_residual": null,
+        "second_multiplier_modulus": 6.412454624068288e-05,
+        "spatial_refinement_difference": 2.2259971643734389e-13,
+        "time_refinement_difference": 4.9960036108132044e-15,
+        "xi": 0.03125
+      },
+      {
+        "analytic_norm_bound": 0.9891509720214378,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.9204702031467737,
+            "spectral_radius": 0.9204701517189179,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.9204702287083274,
+            "spectral_radius": 0.920470177280311,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9204702287113944,
+            "spectral_radius": 0.9204701772833774,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.9204702287113941,
+            "spectral_radius": 0.920470177283377,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.920470177283377,
+        "phase_residual": null,
+        "second_multiplier_modulus": 0.00016338415363561552,
+        "spatial_refinement_difference": 3.0664359940146824e-12,
+        "time_refinement_difference": 4.440892098500626e-16,
+        "xi": 0.125
+      },
+      {
+        "analytic_norm_bound": 0.9573050026043727,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.7382707482272699,
+            "spectral_radius": 0.7382703152962832,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.7382708454182316,
+            "spectral_radius": 0.7382704124872355,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.738270845429397,
+            "spectral_radius": 0.7382704124984015,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.7382708454293949,
+            "spectral_radius": 0.7382704124983991,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.7382704124983991,
+        "phase_residual": null,
+        "second_multiplier_modulus": 0.0006786021184867736,
+        "spatial_refinement_difference": 1.1166068070167512e-11,
+        "time_refinement_difference": 2.4424906541753444e-15,
+        "xi": 0.25
+      },
+      {
+        "analytic_norm_bound": 0.839849201571523,
+        "estimates": [
+          {
+            "cutoff": 4,
+            "norm": 0.5030665861017187,
+            "spectral_radius": 0.5030661006121366,
+            "tolerance": 1e-08
+          },
+          {
+            "cutoff": 7,
+            "norm": 0.5030669325811007,
+            "spectral_radius": 0.5030664470656099,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.5030669326179442,
+            "spectral_radius": 0.5030664471024534,
+            "tolerance": 1e-09
+          },
+          {
+            "cutoff": 10,
+            "norm": 0.5030669326179434,
+            "spectral_radius": 0.5030664471024529,
+            "tolerance": 1e-11
+          }
+        ],
+        "fine_spectral_radius": 0.5030664471024529,
+        "phase_residual": null,
+        "second_multiplier_modulus": 0.0028191825865165917,
+        "spatial_refinement_difference": 3.684352822830306e-11,
+        "time_refinement_difference": 5.551115123125783e-16,
+        "xi": 0.5
+      }
+    ],
+    "status": "PASS"
+  },
+  "open_rhp_count": null,
+  "parameters": {
+    "amplitude_cosine": 1,
+    "amplitude_offset": 2,
+    "diffusivities": [
+      1,
+      2
+    ]
+  },
+  "reason": "The continuum monodromy is a contraction for every spatial Bloch fiber.",
+  "specification_hash": "29331e74ab259059d7844a2ce9c08f3a08dda7a08ce1ba0ef019f8c68f110b0e"
+}

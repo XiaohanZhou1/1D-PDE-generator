@@ -1,0 +1,157 @@
+{
+  "certificate": {
+    "coverage": "All Re(lambda)>0 in unweighted L2; essential spectrum lies on the imaginary axis.",
+    "method": "Hamiltonian constrained coercivity and compact perturbation",
+    "momentum_slope_at_c1": "3",
+    "negative_directions": 1,
+    "neutral": "translation kernel and speed generalized mode",
+    "proof": "docs/cf-calibration.md#c1--modified-kdv"
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "C1-f25a7cb5ef08ac7dbc69",
+  "label": "STABLE",
+  "native_check": {
+    "record": {
+      "classification": {
+        "details": {
+          "components": 1,
+          "constraints": 0,
+          "first_order_dimension": 3,
+          "orders": [
+            3
+          ],
+          "space_order": 3,
+          "time_order": 1
+        },
+        "reasons": [
+          "local system, first order in time"
+        ],
+        "sub_solver": "L",
+        "supported": true
+      },
+      "conservation": {
+        "depth": 1,
+        "flux_constant": [
+          0.0
+        ],
+        "jump_residual": 0.0,
+        "operator": "integrated",
+        "speed": 1.0,
+        "transport": {
+          "left": [
+            1.0
+          ],
+          "right": [
+            1.0
+          ]
+        }
+      },
+      "decided_in_pass": 2,
+      "essential": {
+        "s_ess": 0.0,
+        "sides": {
+          "left": {
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "limit_at_infinity": null,
+            "rounding": 0.0,
+            "s": 0.0
+          },
+          "right": {
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "limit_at_infinity": null,
+            "rounding": 0.0,
+            "s": 0.0
+          }
+        }
+      },
+      "evaluations": 2304,
+      "file": "solver/problems/gkdv_soliton.py",
+      "label": "STABLE",
+      "name": "gkdv_soliton",
+      "neutral": {
+        "counts": [
+          0,
+          0,
+          0
+        ],
+        "evaluations": 2304,
+        "h_fine": 0.05,
+        "label": "STABLE",
+        "qualifier": "neutral: no spectrum with Re(lambda) > 0.01",
+        "reason": "no zero of the determinant in 0.01 <= Re(lambda) <= 3, |Im(lambda)| <= 8 (two meshes and a shorter domain)",
+        "refinement_level": 2,
+        "region": {
+          "bounds": {
+            "applies": false,
+            "lam0": 0.0,
+            "reason": "the energy bound for orders above 2 needs components of even order (no constraint and no component without diffusion)"
+          },
+          "source": "given in the problem file",
+          "x_max": 3.0,
+          "x_min": 0.01,
+          "y_max": 8.0
+        },
+        "resolved": [
+          true,
+          true,
+          true
+        ],
+        "roots": [],
+        "splitting_dimension": 2,
+        "threshold": 0.01
+      },
+      "parameters": {
+        "c": 1.0,
+        "p": 2.0
+      },
+      "qualifier": "neutral: no spectrum with Re(lambda) > 0.01",
+      "reason": "conservation form, integrated operator: no zero of the determinant in 0.01 <= Re(lambda) <= 3, |Im(lambda)| <= 8 (two meshes and a shorter domain)",
+      "roots": [],
+      "solver_version": "2.18.0",
+      "space": "unweighted L2(R; C^n)",
+      "timings": {
+        "essential_spectrum": 0.044467599999734375,
+        "neutral": 0.31271449999985634,
+        "symbolic": 0.04907530000036786,
+        "total": 0.5443590999998378,
+        "wave": 0.13798469999983354
+      },
+      "wave": {
+        "L": 20.72326583694641,
+        "amplitude": 2.449489742782906,
+        "computed": true,
+        "domain_extensions": 0,
+        "index_iota": 0,
+        "kind": "pulse",
+        "left": [
+          0.0
+        ],
+        "nodes": 4083,
+        "profile_error": 4.002586382180571e-10,
+        "residual_rms_max": 4.996291211483268e-10,
+        "right": [
+          0.0
+        ],
+        "slowest_rate": 1.0,
+        "speed": 1.0,
+        "speed_error": 6.60532302877551e-18,
+        "speed_first_solve": -6.507678665940342e-18,
+        "stable_dim_right": 1,
+        "started_from": "guess",
+        "tail_error": 4.8990274362415845e-09,
+        "unstable_dim_left": 1
+      }
+    },
+    "status": "RUN"
+  },
+  "open_rhp_count": 0,
+  "parameters": {
+    "case": "soliton",
+    "p": 2,
+    "speed": "1"
+  },
+  "reason": "Constraining to U-orthogonal perturbations excludes open-right-half-plane eigenvalues.",
+  "specification_hash": "f25a7cb5ef08ac7dbc69e80930b472d14fc25ba7a1a305cbb613eba96bf92c56"
+}

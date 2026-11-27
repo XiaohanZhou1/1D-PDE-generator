@@ -1,0 +1,281 @@
+{
+  "certificate": {
+    "candidate_spatial_root": "-1/2",
+    "coverage": "All Re(lambda)>0 on the half-line with the specified interface condition.",
+    "method": "Exact boundary determinant with Dirichlet resolvent",
+    "neutral": "constant interface displacement",
+    "proof": "docs/cf-calibration.md#e1--moving-boundary"
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "E1-abfe7db54a9fcf147575",
+  "label": "STABLE",
+  "native_check": {
+    "record": {
+      "classification": {
+        "details": {
+          "components": 1,
+          "constraints": 0,
+          "first_order_dimension": 2,
+          "orders": [
+            2
+          ],
+          "space_order": 2,
+          "time_order": 1
+        },
+        "reasons": [
+          "local system on x < s(t) with a Stefan condition"
+        ],
+        "sub_solver": "F",
+        "supported": true
+      },
+      "decided_in_pass": 2,
+      "essential": {
+        "s_ess": -1.0,
+        "sides": {
+          "left": {
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "limit_at_infinity": null,
+            "rounding": 1.4210854715202004e-14,
+            "s": -1.0
+          },
+          "right": {
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "limit_at_infinity": null,
+            "rounding": 1.4210854715202004e-14,
+            "s": -1.0
+          }
+        }
+      },
+      "evaluations": 1216,
+      "file": "solver/problems/stefan_linear_moving.py",
+      "label": "STABLE",
+      "name": "stefan_linear_moving",
+      "parameters": {
+        "kappa": -3.0
+      },
+      "pass_1": {
+        "W": 0,
+        "box": {
+          "coarse": {
+            "count": 0,
+            "evaluations": 256,
+            "gamma_count": 0,
+            "gamma_max_step": 0.04723010276165492,
+            "max_phase_step": 0.015603866334004141,
+            "resolved": true
+          },
+          "fine": {
+            "count": 0,
+            "evaluations": 256,
+            "gamma_count": 0,
+            "gamma_max_step": 0.04723010276165492,
+            "max_phase_step": 0.01560385396726361,
+            "resolved": true
+          }
+        },
+        "cells_fine": 130,
+        "complete_count": true,
+        "counts_consistent": true,
+        "h_coarse": 0.2,
+        "h_fine": 0.1,
+        "m0": 0,
+        "origin_disk": {
+          "coarse": {
+            "count": 0,
+            "evaluations": 64,
+            "gamma_count": 0,
+            "gamma_max_step": 0.00044620595998124074,
+            "max_phase_step": 0.0005590265456040915,
+            "resolved": true
+          },
+          "fine": {
+            "count": 0,
+            "evaluations": 64,
+            "gamma_count": 0,
+            "gamma_max_step": 0.00044620595998124074,
+            "max_phase_step": 0.0005590260055896579,
+            "resolved": true
+          }
+        },
+        "outcome": "STABLE",
+        "parity": {
+          "odd": false,
+          "signs": {
+            "coarse": [
+              -1,
+              -1
+            ],
+            "fine": [
+              -1,
+              -1
+            ]
+          }
+        },
+        "reason": "no zero lies in Re >= 0",
+        "refinement_level": 0,
+        "roots": [],
+        "subdivision": null,
+        "translation_root": null
+      },
+      "pass_2": {
+        "checks": [
+          {
+            "box": {
+              "count": 0,
+              "evaluations": 256,
+              "gamma_count": 0,
+              "gamma_max_step": 0.04723010276165492,
+              "max_phase_step": 0.015603853194534154,
+              "resolved": true
+            },
+            "h": 0.05,
+            "name": "third_resolution",
+            "origin_disk": {
+              "count": 0,
+              "evaluations": 64,
+              "gamma_count": 0,
+              "gamma_max_step": 0.00044620595998124074,
+              "max_phase_step": 0.000559025971995175,
+              "resolved": true
+            },
+            "passed": true,
+            "translation_root": null
+          },
+          {
+            "box": {
+              "count": 0,
+              "evaluations": 256,
+              "gamma_count": 0,
+              "gamma_max_step": 0.04723010276165492,
+              "max_phase_step": 0.015603853954571843,
+              "resolved": true
+            },
+            "lengths": [
+              29.243007394320124,
+              null
+            ],
+            "name": "domain_change",
+            "passed": true
+          },
+          {
+            "eigenvalues_in_zone": 0,
+            "name": "independent_discretisation",
+            "passed": true,
+            "points": 2400,
+            "probe_shifts": 11,
+            "unmatched": []
+          },
+          {
+            "eigenvalues_in_zone": 0,
+            "name": "independent_discretisation",
+            "passed": true,
+            "points": 3600,
+            "probe_shifts": 11,
+            "unmatched": []
+          },
+          {
+            "gamma_count": 0,
+            "gamma_max_step": 0.04723010276165492,
+            "name": "boundary_rank_certificate",
+            "passed": true
+          },
+          {
+            "limit": 0.005,
+            "name": "wave_accuracy",
+            "passed": true,
+            "spectral_error_scale": 5.907023273299394e-10
+          },
+          {
+            "located_real_roots": 0,
+            "name": "parity_index",
+            "odd": false,
+            "passed": true
+          }
+        ],
+        "new_roots": [],
+        "outcome": "STABLE",
+        "reason": "all audit checks passed"
+      },
+      "reason": "all audit checks passed",
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 1.5,
+          "bK": 0.0,
+          "boundary_types": [
+            "D"
+          ],
+          "c0": -1.0,
+          "c2": 0.0,
+          "d": 1.0,
+          "d1": 7.105427357601002e-15,
+          "kappa": 3.0,
+          "kappa_r": 0.0,
+          "lam0": 1.0,
+          "m2": 1.0,
+          "psi2": 0.5000019795146224,
+          "psi_h": 0.0,
+          "reason": null,
+          "rho_b": 0.0,
+          "s1": 0.0,
+          "sigma_b": 0.0
+        },
+        "origin_radius": 0.05,
+        "source": "energy estimate",
+        "x_max": 56.87590249625209,
+        "x_min": -0.1,
+        "y_max": 253.3601960480709
+      },
+      "roots": [],
+      "solver_version": "2.18.0",
+      "space": "unweighted L2(R; C^n)",
+      "splitting_dimension": 2,
+      "timings": {
+        "essential_spectrum": 0.0037956999999551044,
+        "pass_1": 0.12439129999984289,
+        "pass_2": 1.391960100000233,
+        "symbolic": 0.041448400000263064,
+        "total": 1.597993399999723,
+        "wave": 0.03630369999973482
+      },
+      "wave": {
+        "L": 38.990676525760165,
+        "amplitude": 1.0,
+        "boundary_residual": 0.0,
+        "computed": true,
+        "domain_extensions": 0,
+        "kind": "semi",
+        "left": [
+          0.0
+        ],
+        "nodes": 891,
+        "profile_error": 5.907023273299394e-10,
+        "residual_rms_max": 4.976305674019081e-10,
+        "right": [
+          1.0
+        ],
+        "slowest_rate": 0.5314928512013652,
+        "speed": 1.5,
+        "speed_error": 0.0,
+        "speed_first_solve": 1.5,
+        "speed_is_unknown": true,
+        "stefan_residual": 0.0,
+        "tail_error": 3.4141490107190646e-09,
+        "unstable_dim_far": 1
+      }
+    },
+    "status": "RUN"
+  },
+  "open_rhp_count": 0,
+  "parameters": {
+    "case": "advancing",
+    "decay": "1/2",
+    "kappa": "-3",
+    "speed": "3/2"
+  },
+  "reason": "The only candidate spatial root is -1/2 and fails left-decay admissibility.",
+  "specification_hash": "abfe7db54a9fcf147575457fc2db96a1c27d6a9824fa52dc7e172b5427b416e8"
+}

@@ -1,0 +1,89 @@
+{
+  "analytical_label": "STABLE",
+  "coperiodic_label": "STABLE",
+  "evidence_grade": "EXACT_LINEAR_SPECTRUM",
+  "instability_cutoff_squared": "0",
+  "instance_id": "B1-25673d590e86fad70dbe",
+  "label": "STABLE",
+  "numerical_fiber_checks": [
+    {
+      "exact_top_three": [
+        -0.0,
+        -0.09861218113400268,
+        -0.09861218113400268
+      ],
+      "finite_difference_top_three": [
+        [
+          0.00020073311518354364,
+          -0.0978967892643309,
+          -0.0978967892643309
+        ],
+        [
+          5.019537211575099e-05,
+          -0.0984333463900961,
+          -0.0984333463900961
+        ],
+        [
+          1.2549598687201725e-05,
+          -0.09856747328469717,
+          -0.09856747328500162
+        ]
+      ],
+      "max_absolute_error": [
+        0.0007153918696717748,
+        0.00017883474390657794,
+        4.4707849305505865e-05
+      ],
+      "nodes": [
+        64,
+        128,
+        256
+      ],
+      "status": "PASS",
+      "xi": 0.0
+    },
+    {
+      "exact_top_three": [
+        -0.009482406336703834,
+        -0.04037296096143573,
+        -0.1909782295450865
+      ],
+      "finite_difference_top_three": [
+        [
+          -0.009209887190754766,
+          -0.03991127066757102,
+          -0.18997659321253219
+        ],
+        [
+          -0.009414259580271023,
+          -0.040257518401281854,
+          -0.1907279541957171
+        ],
+        [
+          -0.009465368587113727,
+          -0.04034409907462874,
+          -0.19091566908954752
+        ]
+      ],
+      "max_absolute_error": [
+        0.0010016363325543176,
+        0.00025027534936941653,
+        6.25604555389847e-05
+      ],
+      "nodes": [
+        64,
+        128,
+        256
+      ],
+      "status": "PASS",
+      "xi": 0.16666666666666666
+    }
+  ],
+  "open_rhp_count": null,
+  "parameters": {
+    "q_squared": "1/4"
+  },
+  "phase_diffusion_coefficient": "1/3",
+  "reason": "The exact dispersion relation excludes positive Bloch spectrum.",
+  "specification_hash": "25673d590e86fad70dbec54907e8cd96ef6008fd9c5b85cd389b0186f7f59984"
+}

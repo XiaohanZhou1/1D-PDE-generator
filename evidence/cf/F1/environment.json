@@ -1,0 +1,13 @@
+{
+  "backend": "C\u2013F exact calibration proofs and F1 numerical monodromy regression",
+  "family": "F1",
+  "numpy": "2.4.4",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "scipy": "1.18.1",
+  "seed": 20261124,
+  "solver_enabled": true,
+  "solver_source_sha256": {
+    "docs/cf-calibration.md": "b54bed77bb01f901b78d9c93d0569b48f8caabb13128ed726c3d5974058706c4",
+    "pdegen/cf_calibration.py": "30853ac422aa7da8cb8fd4b26f05036f4b879ecf48139f06a2e088243887670e"
+  }
+}

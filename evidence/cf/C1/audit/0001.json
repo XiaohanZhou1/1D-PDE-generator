@@ -1,0 +1,33 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "C1-f25a7cb5ef08ac7dbc69",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "C1.modified-kdv",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "reviewed exact calibration",
+    "review_required": false
+  },
+  "reason": "Constraining to U-orthogonal perturbations excludes open-right-half-plane eigenvalues.",
+  "references": [
+    "https://doi.org/10.1098/rsta.1992.0055"
+  ],
+  "sampling_group": "C1.modified-kdv",
+  "solver_dispatched": true,
+  "specification_hash": "f25a7cb5ef08ac7dbc69e80930b472d14fc25ba7a1a305cbb613eba96bf92c56",
+  "status": "EVALUATED"
+}

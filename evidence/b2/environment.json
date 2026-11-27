@@ -1,0 +1,12 @@
+{
+  "backend": "B2 Fourier continuation, Bloch Galerkin and physical finite differences",
+  "family": "B2",
+  "numpy": "2.4.4",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "scipy": "1.18.1",
+  "seed": 20261124,
+  "solver_enabled": true,
+  "solver_source_sha256": {
+    "periodic.py": "7b30ed3b5b6d1f7e4ad298dbe1adfdfe64da87283cc0983681c28225c260be0a"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "audit_version": "1",
+  "candidate_index": 1,
+  "checks": {
+    "contract": "PASS",
+    "diffusion": "PASS",
+    "endstates": "PASS",
+    "global_nonlinear_existence": "UNVERIFIED",
+    "linearisation": "PASS",
+    "phase": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS",
+    "translation": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": null,
+  "instance_id": "A1-dd0b7de1e02e0a26b7b4",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "A1.explicit-family",
+    "screen": "reducible seed",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": "analytic calibration",
+    "known_reduction": "decoupled scalar blocks",
+    "review_required": false
+  },
+  "reason": "Mathematical contract checked without a solver run.",
+  "references": [
+    "5_1D_problems_v1.txt#A1",
+    "independent_audit_1.txt#A1",
+    "docs/mathematics.md",
+    "docs/interface.md"
+  ],
+  "sampling_group": "A1.explicit-family",
+  "solver_dispatched": false,
+  "specification_hash": "dd0b7de1e02e0a26b7b4d1cdcea9f08849e942d407ab2abcbd86d5e43a2fddba",
+  "status": "VALIDATED"
+}

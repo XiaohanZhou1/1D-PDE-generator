@@ -1,0 +1,43 @@
+{
+  "audit_version": "1",
+  "candidate_index": 4,
+  "checks": {
+    "contract": "PASS",
+    "diffusion": "PASS",
+    "endstates": "PASS",
+    "global_nonlinear_existence": "UNVERIFIED",
+    "linearisation": "PASS",
+    "phase": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "UNVERIFIED",
+    "solver_dispatch": "PASS",
+    "translation": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "CONVERGED_NUMERICAL",
+  "instance_id": "A5-1bf39252b14d8a299ce9",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "A5.explicit-family",
+    "screen": "A5 parameter variant; finite-frequency exclusion requires review",
+    "status": "UNCERTAIN",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "UNVERIFIED",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "conservative integration and an origin calculation",
+    "review_required": true
+  },
+  "reason": "conservative integrated operator: one continued origin zero and no additional zeros inside the supplied enclosure",
+  "references": [
+    "5_1D_problems_v1.txt#A5",
+    "independent_audit_1.txt#A5",
+    "docs/mathematics.md",
+    "docs/interface.md"
+  ],
+  "sampling_group": "A5.explicit-family",
+  "solver_dispatched": true,
+  "specification_hash": "1bf39252b14d8a299ce92e457eb2a3089cd7c32c598b949591b12e154dc115a4",
+  "status": "EVALUATED"
+}

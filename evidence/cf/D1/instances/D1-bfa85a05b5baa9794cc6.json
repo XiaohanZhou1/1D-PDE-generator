@@ -1,0 +1,51 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "characteristic": "lambda-partial_x^2+1-sigma*sech(x/sqrt(2))^2*H(lambda)",
+    "delay_transform": "H(lambda)=integral(exp(-lambda*s),s=0..tau)/tau",
+    "form": "Allen-Cahn L2 block plus uniform-delay history generator",
+    "space": "L2(R;C) x C([-tau,0];L2(R;C))"
+  },
+  "equations": [
+    "u_t=u_xx+u-u^3",
+    "v_t=v_xx-v+sigma*(1-u^2)*integral(v(x,t-s),s=0..tau)/tau"
+  ],
+  "family_id": "D1",
+  "instance_id": "D1-bfa85a05b5baa9794cc6",
+  "novelty_assessment": {
+    "grouping": "D1.uniform-delay-kink",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "case": "positive_root",
+    "sigma": "6",
+    "tau": "2"
+  },
+  "references": [],
+  "schema_version": "cf-calibration-0.1",
+  "seed": 20261124,
+  "specification_hash": "bfa85a05b5baa9794cc6c3fc4c14445f42b274e67ab0789efb1420706be2e34c",
+  "stability_question": "Exclude Re(lambda)>0 in the recorded space, or exhibit unstable spectrum.",
+  "structure_id": "D1.uniform-delay-kink",
+  "target_wave": {
+    "endstates": [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "profile": "(tanh(x/sqrt(2)),0)",
+    "speed": 0
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}

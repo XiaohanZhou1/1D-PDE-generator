@@ -1,0 +1,31 @@
+{
+  "audit_version": "1",
+  "candidate_index": 2,
+  "checks": {
+    "contract": "PASS",
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "D1-bfa85a05b5baa9794cc6",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "D1.uniform-delay-kink",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "reviewed exact calibration",
+    "review_required": false
+  },
+  "reason": "The top of the characteristic operator crosses zero on (0,5) above its essential spectrum.",
+  "references": [],
+  "sampling_group": "D1.uniform-delay-kink",
+  "solver_dispatched": true,
+  "specification_hash": "bfa85a05b5baa9794cc6c3fc4c14445f42b274e67ab0789efb1420706be2e34c",
+  "status": "EVALUATED"
+}

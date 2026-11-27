@@ -1,0 +1,43 @@
+{
+  "audit_version": "1",
+  "candidate_index": 2,
+  "checks": {
+    "contract": "PASS",
+    "diffusion": "PASS",
+    "endstates": "PASS",
+    "global_nonlinear_existence": "UNVERIFIED",
+    "linearisation": "PASS",
+    "phase": "PASS",
+    "profile": "PASS",
+    "proof_difficulty": "UNVERIFIED",
+    "solver_dispatch": "PASS",
+    "translation": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": null,
+  "instance_id": "A1-3f4984da835a08cc578f",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "A1.explicit-family",
+    "screen": "coupled operator; fixed-point count needs expert review",
+    "status": "UNCERTAIN",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "UNVERIFIED",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": null,
+    "review_required": true
+  },
+  "reason": "Mathematical contract checked without a solver run.",
+  "references": [
+    "5_1D_problems_v1.txt#A1",
+    "independent_audit_1.txt#A1",
+    "docs/mathematics.md",
+    "docs/interface.md"
+  ],
+  "sampling_group": "A1.explicit-family",
+  "solver_dispatched": false,
+  "specification_hash": "3f4984da835a08cc578f09ea372087c778bfe7e2f405dbeb6ffa742a1ec6ffc2",
+  "status": "VALIDATED"
+}

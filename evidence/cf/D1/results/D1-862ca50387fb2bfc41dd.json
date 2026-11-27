@@ -1,0 +1,313 @@
+{
+  "certificate": {
+    "coverage": "All Re(lambda)>0 on the history space and the Allen\u2013Cahn L2 block.",
+    "maximum_resolvent_perturbation_norm": "1/2",
+    "method": "History resolvent and uniform small-gain bound",
+    "neutral": "kink translation",
+    "proof": "docs/cf-calibration.md#d1--uniform-distributed-delay"
+  },
+  "evidence_grade": "RIGOROUSLY_CERTIFIED",
+  "instance_id": "D1-862ca50387fb2bfc41dd",
+  "label": "STABLE",
+  "native_check": {
+    "record": {
+      "classification": {
+        "details": {
+          "components": 2,
+          "delay": 1.98940093499165,
+          "delayed_components": [
+            1
+          ],
+          "delays": 16,
+          "distributed_delays": [
+            {
+              "decay": null,
+              "frequency": 12.0,
+              "lower": 0.0,
+              "mass": 1.0,
+              "mean_delay": 1.0,
+              "nodes": 16,
+              "upper": 2.0
+            }
+          ],
+          "space_order": 2,
+          "time_order": 1
+        },
+        "reasons": [
+          "local terms and time delays (discrete or distributed)"
+        ],
+        "sub_solver": "D",
+        "supported": true
+      },
+      "decided_in_pass": 2,
+      "essential": {
+        "s_ess": -1.0,
+        "sides": {
+          "left": {
+            "chebyshev_points": 20,
+            "corrected_by_newton": false,
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "s": -1.0
+          },
+          "right": {
+            "chebyshev_points": 20,
+            "corrected_by_newton": false,
+            "growing_at_large_kappa": false,
+            "kappa": 0.0,
+            "s": -1.0
+          }
+        }
+      },
+      "evaluations": 1472,
+      "file": "solver/problems/delay_kink_uniform.py",
+      "label": "STABLE",
+      "name": "delay_kink_uniform",
+      "parameters": {
+        "sigma": 0.5,
+        "tau": 2.0
+      },
+      "pass_1": {
+        "W": 1,
+        "box": {
+          "coarse": {
+            "count": 1,
+            "evaluations": 256,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.08178903513648092,
+            "resolved": true
+          },
+          "fine": {
+            "count": 1,
+            "evaluations": 256,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.08737968275642775,
+            "resolved": true
+          }
+        },
+        "cells_fine": 292,
+        "complete_count": true,
+        "counts_consistent": true,
+        "h_coarse": 0.28284271247461734,
+        "h_fine": 0.14142135623730867,
+        "m0": 1,
+        "origin_disk": {
+          "coarse": {
+            "count": 1,
+            "evaluations": 64,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.10468467831970249,
+            "resolved": true
+          },
+          "fine": {
+            "count": 1,
+            "evaluations": 64,
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "max_phase_step": 0.1039928998437461,
+            "resolved": true
+          }
+        },
+        "outcome": "STABLE",
+        "parity": {
+          "odd": false,
+          "signs": {
+            "coarse": [
+              1,
+              1
+            ],
+            "fine": [
+              1,
+              1
+            ]
+          }
+        },
+        "reason": "only the translation zero lies in Re >= 0",
+        "refinement_level": 0,
+        "roots": [],
+        "subdivision": null,
+        "translation_root": [
+          7.050961512619981e-06,
+          2.7106250624802612e-27
+        ]
+      },
+      "pass_2": {
+        "checks": [
+          {
+            "box": {
+              "count": 1,
+              "evaluations": 256,
+              "gamma_count": 0,
+              "gamma_max_step": 0.0,
+              "max_phase_step": 0.09039049435625662,
+              "resolved": true
+            },
+            "h": 0.07071067811865434,
+            "name": "third_resolution",
+            "origin_disk": {
+              "count": 1,
+              "evaluations": 64,
+              "gamma_count": 0,
+              "gamma_max_step": 0.0,
+              "max_phase_step": 0.1037038607490786,
+              "resolved": true
+            },
+            "passed": true,
+            "translation_root": [
+              4.338688917362998e-07,
+              1.274722795231942e-26
+            ]
+          },
+          {
+            "limit": 0.0125,
+            "name": "translation_root_small",
+            "passed": true,
+            "value": [
+              4.338688917362998e-07,
+              1.274722795231942e-26
+            ]
+          },
+          {
+            "box": {
+              "count": 1,
+              "evaluations": 256,
+              "gamma_count": 0,
+              "gamma_max_step": 0.0,
+              "max_phase_step": 0.08737104246942096,
+              "resolved": true
+            },
+            "lengths": [
+              20.72326583694641,
+              15.542449377709808
+            ],
+            "name": "domain_change",
+            "passed": true
+          },
+          {
+            "box": {
+              "count": 1,
+              "evaluations": 256,
+              "gamma_count": 0,
+              "gamma_max_step": 0.0,
+              "max_phase_step": 0.08737104241126657,
+              "resolved": true
+            },
+            "lengths": [
+              15.542449377709808,
+              20.72326583694641
+            ],
+            "name": "domain_change",
+            "passed": true
+          },
+          {
+            "eigenvalues_in_zone": 0,
+            "name": "independent_discretisation",
+            "passed": true,
+            "points": 300,
+            "probe_shifts": 3,
+            "unmatched": []
+          },
+          {
+            "eigenvalues_in_zone": 0,
+            "name": "independent_discretisation",
+            "passed": true,
+            "points": 450,
+            "probe_shifts": 3,
+            "unmatched": []
+          },
+          {
+            "gamma_count": 0,
+            "gamma_max_step": 0.0,
+            "name": "boundary_rank_certificate",
+            "passed": true
+          },
+          {
+            "limit": 0.0125,
+            "name": "wave_accuracy",
+            "passed": true,
+            "spectral_error_scale": 2.0309621466078436e-08
+          },
+          {
+            "located_real_roots": 0,
+            "name": "parity_index",
+            "odd": false,
+            "passed": true
+          }
+        ],
+        "new_roots": [],
+        "outcome": "STABLE",
+        "reason": "all audit checks passed"
+      },
+      "reason": "all audit checks passed",
+      "region": {
+        "bounds": {
+          "a": 0.0,
+          "applies": true,
+          "b": 1.7115272586648866e-14,
+          "bK": 0.0,
+          "bounded_term": 0.6487212707001282,
+          "c0": 1.6487212707001282,
+          "c2": 0.6487212707001282,
+          "d": 1.0,
+          "d1": 0.0,
+          "lam0": 2.0,
+          "reason": null,
+          "s1": 1.0097419586828951e-28
+        },
+        "origin_radius": 0.125,
+        "source": "energy estimate",
+        "x_max": 1.813593397770141,
+        "x_min": -0.25,
+        "y_max": 1.1
+      },
+      "roots": [],
+      "solver_version": "2.18.0",
+      "space": "unweighted L2(R; C^n)",
+      "timings": {
+        "essential_spectrum": 0.007166999999753898,
+        "pass_1": 0.4894339999996191,
+        "pass_2": 0.9567673000001378,
+        "symbolic": 0.052051599999686005,
+        "total": 1.7809637999998813,
+        "wave": 0.23604430000023058
+      },
+      "wave": {
+        "L": 20.72326583694641,
+        "computed": true,
+        "continuation_steps": 4,
+        "delay": 1.98940093499165,
+        "delays": 16,
+        "grid_step": 0.028284271247461898,
+        "kind": "front",
+        "left": [
+          -1.0,
+          0.0
+        ],
+        "nodes": 1464,
+        "profile_error": 8.123848586431374e-09,
+        "right": [
+          1.0,
+          0.0
+        ],
+        "speed": 1.7115272586648866e-14,
+        "speed_error": 1.021005331714932e-15,
+        "speed_is_unknown": true,
+        "speed_without_delay": 5.947972653342571e-18,
+        "started_from": "continuation in the delay",
+        "tail_error": 1.1489698081845745e-12
+      }
+    },
+    "status": "RUN"
+  },
+  "open_rhp_count": 0,
+  "parameters": {
+    "case": "small_gain",
+    "sigma": "1/2",
+    "tau": "2"
+  },
+  "reason": "The delay perturbation of the resolvent has norm at most 1/2 in the closed right half-plane.",
+  "specification_hash": "862ca50387fb2bfc41dda316ac8465cc2d7315a7646bbdc8bd5b861dc55a33fd"
+}

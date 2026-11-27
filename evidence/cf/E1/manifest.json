@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "audit": "audit/0001.json",
+      "instance": "instances/E1-abfe7db54a9fcf147575.json",
+      "label": "STABLE",
+      "open_rhp_count": 0,
+      "result": "results/E1-abfe7db54a9fcf147575.json"
+    },
+    {
+      "audit": "audit/0002.json",
+      "instance": "instances/E1-23aaa05962b04abecbfb.json",
+      "label": "UNSTABLE",
+      "open_rhp_count": 1,
+      "result": "results/E1-23aaa05962b04abecbfb.json"
+    }
+  ],
+  "seed": 20261124
+}

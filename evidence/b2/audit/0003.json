@@ -1,0 +1,37 @@
+{
+  "audit_version": "1",
+  "candidate_index": 3,
+  "checks": {
+    "contract": "PASS",
+    "linearisation": "PASS",
+    "period": "UNVERIFIED",
+    "phase": "UNVERIFIED",
+    "phase_mode": "UNVERIFIED",
+    "profile": "UNVERIFIED",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  },
+  "dataset_admission": "HOLD",
+  "evidence_grade": null,
+  "instance_id": "B2-01d1228f5ecef5091040",
+  "near_duplicate_of": null,
+  "novelty_assessment": {
+    "grouping": "B2.swift-hohenberg",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "proof_review": "NOT_APPLICABLE",
+  "proof_screen": {
+    "elementary_decision": null,
+    "known_reduction": "classical Swift\u2013Hohenberg roll and selfadjoint Bloch fibers",
+    "review_required": false
+  },
+  "reason": "The scan does not certify exclusion between Bloch samples or near the phase mode.",
+  "references": [
+    "https://doi.org/10.1007/s002200050230"
+  ],
+  "sampling_group": "B2.swift-hohenberg",
+  "solver_dispatched": true,
+  "specification_hash": "01d1228f5ecef5091040c83578c9e655f75a40f3acf6a5923ad7af5c2031c9dd",
+  "status": "UNCERTAIN"
+}

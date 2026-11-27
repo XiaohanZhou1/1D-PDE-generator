@@ -1,0 +1,44 @@
+{
+  "calibration": true,
+  "eigenproblem": {
+    "fiber": "Y_t=(J-2*X(t)*X(t)^T-k^2*diag(1,2))*Y for k in R",
+    "form": "temporal monodromy on L2(R;C^2)"
+  },
+  "equations": [
+    "X_t=diag(1,2)*X_xx+J*X+(1-|X|^2)*X",
+    "J=[[0,-1],[1,0]]"
+  ],
+  "family_id": "F1",
+  "instance_id": "F1-a9d37d3a65a006f745f5",
+  "novelty_assessment": {
+    "grouping": "F1.rotating-reaction-diffusion",
+    "status": "NOT_NOVEL",
+    "training_admission": "HOLD"
+  },
+  "parameters": {
+    "case": "rotation",
+    "diffusivities": [
+      1,
+      2
+    ],
+    "period": "2*pi"
+  },
+  "references": [],
+  "schema_version": "cf-calibration-0.1",
+  "seed": 20261124,
+  "specification_hash": "a9d37d3a65a006f745f5ef35a2714190ecdf5bbb705240aaac81ca8decab0d7c",
+  "stability_question": "Exclude |multiplier|>1 for the full-line temporal monodromy.",
+  "structure_id": "F1.rotating-reaction-diffusion",
+  "target_wave": {
+    "period": "2*pi",
+    "phase": "X(0)=(1,0)",
+    "profile": "(cos(t),sin(t))",
+    "spatial_domain": "R"
+  },
+  "template_version": "1",
+  "validity_checks": {
+    "contract_target": "PASS",
+    "proof_difficulty": "NOT_APPLICABLE",
+    "solver_dispatch": "PASS"
+  }
+}
